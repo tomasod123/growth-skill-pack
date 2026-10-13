@@ -12,7 +12,7 @@ A skill is a folder in `~/.claude/skills/` with a `SKILL.md` file. The file has 
 
 Works on macOS, Linux, or Windows through WSL (native Windows is not supported: several scripts are bash and one uses `fcntl`).
 
-1. Install Claude Code if you don't have it: `npm install -g @anthropic-ai/claude-code`, then run `claude` once and log in.
+1. You already have Claude Code, so start here.
 2. Base tools: Python 3.10+, **Node 22+** (some page-QC scripts need it), ffmpeg, tesseract, and Google Chrome.
    ```bash
    # macOS
