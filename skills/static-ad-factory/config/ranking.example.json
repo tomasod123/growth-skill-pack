@@ -1,0 +1,17 @@
+{
+  "_readme": "Weights for rank_approved.py. The text-load and hook numbers are starting points from one past competitor study (fewer on-image text elements ran much longer). Re-derive them from YOUR scrape with the text_lines vs days-running table in step 4 before trusting them.",
+  "launch_n": 30,
+  "max_per_painpoint": 4,
+  "max_per_style": 6,
+  "days_weight": 0.45,
+  "days_cap": 120,
+  "text_penalty": {"0": 0, "1": 0, "2": -2, "3": -5, "4": -14, "5": -20},
+  "text_penalty_over": -20,
+  "question_hook_bonus": 8,
+  "big_number_hook_penalty": -6,
+  "contrarian_word_bonus": 4,
+  "fit_high_bonus": 6,
+  "fit_low_penalty": -6,
+  "proof_bonus": 5,
+  "on_hold_penalty": -12
+}

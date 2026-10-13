@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setter call audit · {{SETTER_NAME}} · {{DATE}}</title>
+<!-- Optional: replace these variables with your brand tokens (e.g. from ~/.claude/brand/tokens.css) -->
+<style>
+  :root{--primary:#1F3A5F;--ink:#16181D;--muted:#5B6270;--paper:#F7F7F5;--rule:#E1E3E8;
+        --pass:#1E7F4F;--partial:#B26A00;--miss:#B42318;--font:system-ui,-apple-system,"Segoe UI",sans-serif}
+  *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.55}
+  .wrap{max-width:920px;margin:0 auto;padding:32px 24px 64px}
+  h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:36px 0 12px;color:var(--primary)}
+  .meta{color:var(--muted);font-size:14px}.banner{background:#FFF7E6;border:1px solid #F2D7A6;border-radius:10px;padding:12px 16px;margin:18px 0;font-size:14px}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--rule);border-radius:10px;overflow:hidden;font-size:14px}
+  th,td{padding:9px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}th{background:#F0F2F5;font-weight:600}
+  .p{color:var(--pass);font-weight:700}.pa{color:var(--partial);font-weight:700}.m{color:var(--miss);font-weight:700}
+  .card{background:#fff;border:1px solid var(--rule);border-radius:10px;padding:16px 18px;margin-bottom:12px}
+  .q{background:var(--paper);border-left:3px solid var(--primary);padding:8px 12px;margin:8px 0;font-size:14px}
+  .ts{font-family:ui-monospace,monospace;color:var(--muted);font-size:12px}
+  footer{margin-top:48px;color:var(--muted);font-size:12px;border-top:1px solid var(--rule);padding-top:12px}
+</style>
+</head>
+<body><div class="wrap">
+  <h1>Setter call audit: {{SETTER_NAME}}</h1>
+  <div class="meta">{{BUSINESS_NAME}} · {{DATE_RANGE}} · {{N_CALLS}} calls scored · rubric v{{RUBRIC_VERSION}}</div>
+  <!-- Show when N_CALLS < min_calls_for_judgement, or the setter is inside ramp_days -->
+  <div class="banner">{{SAMPLE_SIZE_OR_RAMP_NOTE}}</div>
+
+  <h2>Scorecard at a glance</h2>
+  <!-- One row per rubric dimension; cells use class p / pa / m -->
+  <table><tr><th>Dimension</th><th>Pass</th><th>Partial</th><th>Miss</th><th>Pattern in one line</th></tr>
+  {{SCORECARD_ROWS}}
+  </table>
+
+  <h2>Speed to lead</h2>
+  <table><tr><th>Call</th><th>Lead created</th><th>First touch (min)</th><th>First call (min)</th><th>Call attempts</th><th>Score</th></tr>
+  {{SPEED_ROWS}}
+  </table>
+
+  <h2>Top 3 coaching priorities</h2>
+  <!-- Ranked by impact on booked and shown calls. Each: the pattern, two quotes with [mm:ss], the target behaviour. -->
+  {{PRIORITY_CARDS}}
+
+  <h2>Drills to rehearse before the next batch of calls</h2>
+  <!-- Three drills: what the lead says, the target line, what good sounds like. -->
+  {{DRILL_CARDS}}
+
+  <h2>Call by call</h2>
+  <!-- One card per call: label (message id prefix), duration, outcome, 8 scores, quote + timestamp for each -->
+  {{CALL_CARDS}}
+
+  <h2>Training session agenda</h2>
+  {{TRAINING_AGENDA}}
+
+  <footer>Behavioural observations only, tied to quotes and the rubric. Transcripts are machine-made and may mishear names and numbers.</footer>
+</div></body></html>

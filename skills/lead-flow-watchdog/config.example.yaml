@@ -1,0 +1,41 @@
+# Copy to config.yaml and edit. One entry per business (one GHL sub-account + optional Meta ad account).
+
+graph_version: v26.0        # Meta Graph API version
+timezone: Europe/London     # use your ad account's time zone so Meta days and CRM days line up
+ghl_page_limit: 100         # contacts per page in GHL search (max 100)
+output_dir: alerts          # relative to the skill folder
+
+businesses:
+  - name: Example Clinic
+    active: true
+    currency: GBP
+    target_cpl: 40                         # your target cost per lead. Leave out to skip CPL-vs-target.
+    meta_ad_account_id: act_YOUR_AD_ACCOUNT_ID   # leave out to run CRM-only checks
+    ghl:
+      location_id: YOUR_GHL_LOCATION_ID
+      token_env: GHL_TOKEN                 # name of the .env variable holding this sub-account's token
+    meta_lead_rules:                       # how to spot a Meta lead in the CRM
+      tags: [facebook lead]                # tags your workflow adds to Meta leads (exact match, any case)
+      sources: [facebook, instagram]       # text found in the contact's Source field
+      utm_sources: [facebook, fb, instagram, ig]   # exact UTM source values
+    watch_days: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]  # days to check. Drop Sun if Sundays are always quiet.
+    # ramp_until: 2026-01-31               # new campaign: drop and CPL alerts show as info until this date
+    # timezone: America/New_York           # per-business override
+    # thresholds: {target overrides for this business only}
+
+# Defaults shown. Override any of them here (all businesses) or per business.
+thresholds:
+  processing_break_min_source: 3     # 3+ Meta-source contacts and 0 tagged = processing break
+  partial_break_min_source: 5        # 5+ Meta-source contacts ...
+  partial_break_tagged_share: 0.30   # ... under 30% tagged = partial break
+  integration_min_meta_leads: 1      # Meta leads > 0 and 0 in the CRM = integration break
+  crm_gap_min_meta_leads: 5
+  crm_gap_share: 0.50                # CRM under half of Meta's count = gap warning
+  no_lead_spend_cpl_multiple: 1.0    # spend of 1x target CPL with 0 leads = spend with no leads
+  no_lead_spend_min: 10              # used when target_cpl is not set
+  drop_ratio: 0.50                   # leads under half the 7-day average = delivery drop
+  drop_min_avg: 2.0                  # only when the average is 2+ a day
+  cpl_spike_multiple: 2.0            # CPL over 2x target = warning
+  cpl_watch_multiple: 1.5            # over 1.5x = info
+  cpl_trailing_multiple: 2.0         # CPL over 2x the 7-day CPL = warning
+  cpl_trailing_min_leads: 3

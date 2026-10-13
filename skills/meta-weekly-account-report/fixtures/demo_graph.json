@@ -1,0 +1,1192 @@
+{
+ "_note": "Demo data in Meta Graph API response shapes. Keys mirror account|edge|level|since.",
+ "reference_date": "2026-03-12",
+ "responses": {
+  "act_DEMO_UK|insights|account|2026-03-05": [
+   {
+    "data": [
+     {
+      "account_id": "demo_gbp",
+      "account_name": "Demo Clinic UK",
+      "account_currency": "GBP",
+      "spend": "845.00",
+      "impressions": "42000",
+      "inline_link_clicks": "430",
+      "ctr": "1.638095",
+      "cpm": "20.119048",
+      "frequency": "3.070175",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "430"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "470"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "465"
+       },
+       {
+        "action_type": "lead",
+        "value": "21"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "21"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "7"
+       }
+      ],
+      "date_start": "2026-03-05",
+      "date_stop": "2026-03-11",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "40.238095"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_UK|insights|campaign|2026-03-05": [
+   {
+    "data": [
+     {
+      "campaign_id": "c101",
+      "campaign_name": "Leads: Skin offer",
+      "spend": "695.00",
+      "impressions": "35000",
+      "inline_link_clicks": "370",
+      "ctr": "1.691429",
+      "cpm": "19.857143",
+      "frequency": "3.143242",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "370"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "410"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "405"
+       },
+       {
+        "action_type": "lead",
+        "value": "17"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "17"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "5"
+       }
+      ],
+      "date_start": "2026-03-05",
+      "date_stop": "2026-03-11",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "40.882353"
+       }
+      ]
+     },
+     {
+      "campaign_id": "c102",
+      "campaign_name": "Leads: Free consult",
+      "spend": "150.00",
+      "impressions": "7000",
+      "inline_link_clicks": "60",
+      "ctr": "1.371429",
+      "cpm": "21.428571",
+      "frequency": "2.058824",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "60"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "100"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "95"
+       },
+       {
+        "action_type": "lead",
+        "value": "4"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "4"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "1"
+       }
+      ],
+      "date_start": "2026-03-05",
+      "date_stop": "2026-03-11",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "37.500000"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_UK|insights|ad|2026-03-05": [
+   {
+    "data": [
+     {
+      "campaign_id": "c101",
+      "campaign_name": "Leads: Skin offer",
+      "ad_id": "a101",
+      "ad_name": "Before and after video",
+      "spend": "380.00",
+      "impressions": "21000",
+      "inline_link_clicks": "260",
+      "ctr": "1.980952",
+      "cpm": "18.095238",
+      "frequency": "2.625000",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "260"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "300"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "295"
+       },
+       {
+        "action_type": "lead",
+        "value": "14"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "14"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "4"
+       }
+      ],
+      "date_start": "2026-03-05",
+      "date_stop": "2026-03-11",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "27.142857"
+       }
+      ]
+     },
+     {
+      "campaign_id": "c101",
+      "campaign_name": "Leads: Skin offer",
+      "ad_id": "a102",
+      "ad_name": "Testimonial carousel",
+      "spend": "220.00",
+      "impressions": "9000",
+      "inline_link_clicks": "70",
+      "ctr": "1.244444",
+      "cpm": "24.444444",
+      "frequency": "4.285714",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "70"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "110"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "105"
+       },
+       {
+        "action_type": "lead",
+        "value": "3"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "3"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "1"
+       }
+      ],
+      "date_start": "2026-03-05",
+      "date_stop": "2026-03-11",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "73.333333"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     },
+     "next": "demo://act_DEMO_UK|insights|ad|2026-03-05#1"
+    }
+   },
+   {
+    "data": [
+     {
+      "campaign_id": "c101",
+      "campaign_name": "Leads: Skin offer",
+      "ad_id": "a103",
+      "ad_name": "Price static",
+      "spend": "95.00",
+      "impressions": "5000",
+      "inline_link_clicks": "40",
+      "ctr": "1.280000",
+      "cpm": "19.000000",
+      "frequency": "1.666667",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "40"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "80"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "75"
+       }
+      ],
+      "date_start": "2026-03-05",
+      "date_stop": "2026-03-11"
+     },
+     {
+      "campaign_id": "c102",
+      "campaign_name": "Leads: Free consult",
+      "ad_id": "a104",
+      "ad_name": "Founder talking head",
+      "spend": "150.00",
+      "impressions": "7000",
+      "inline_link_clicks": "60",
+      "ctr": "1.371429",
+      "cpm": "21.428571",
+      "frequency": "1.750000",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "60"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "100"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "95"
+       },
+       {
+        "action_type": "lead",
+        "value": "4"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "4"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "1"
+       }
+      ],
+      "date_start": "2026-03-05",
+      "date_stop": "2026-03-11",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "37.500000"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_UK|insights|account|2026-02-26": [
+   {
+    "data": [
+     {
+      "account_id": "demo_gbp",
+      "account_name": "Demo Clinic UK",
+      "account_currency": "GBP",
+      "spend": "750.00",
+      "impressions": "39300",
+      "inline_link_clicks": "410",
+      "ctr": "1.669211",
+      "cpm": "19.083969",
+      "frequency": "2.924107",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "410"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "450"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "445"
+       },
+       {
+        "action_type": "lead",
+        "value": "23"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "23"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "7"
+       }
+      ],
+      "date_start": "2026-02-26",
+      "date_stop": "2026-03-04",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "32.608696"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_UK|insights|campaign|2026-02-26": [
+   {
+    "data": [
+     {
+      "campaign_id": "c101",
+      "campaign_name": "Leads: Skin offer",
+      "spend": "610.00",
+      "impressions": "32500",
+      "inline_link_clicks": "355",
+      "ctr": "1.747692",
+      "cpm": "18.769231",
+      "frequency": "2.963976",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "355"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "395"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "390"
+       },
+       {
+        "action_type": "lead",
+        "value": "19"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "19"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "6"
+       }
+      ],
+      "date_start": "2026-02-26",
+      "date_stop": "2026-03-04",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "32.105263"
+       }
+      ]
+     },
+     {
+      "campaign_id": "c102",
+      "campaign_name": "Leads: Free consult",
+      "spend": "140.00",
+      "impressions": "6800",
+      "inline_link_clicks": "55",
+      "ctr": "1.294118",
+      "cpm": "20.588235",
+      "frequency": "2.051282",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "55"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "95"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "90"
+       },
+       {
+        "action_type": "lead",
+        "value": "4"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "4"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "1"
+       }
+      ],
+      "date_start": "2026-02-26",
+      "date_stop": "2026-03-04",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "35.000000"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_UK|insights|ad|2026-02-26": [
+   {
+    "data": [
+     {
+      "campaign_id": "c101",
+      "campaign_name": "Leads: Skin offer",
+      "ad_id": "a101",
+      "ad_name": "Before and after video",
+      "spend": "350.00",
+      "impressions": "20000",
+      "inline_link_clicks": "240",
+      "ctr": "1.920000",
+      "cpm": "17.500000",
+      "frequency": "2.531646",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "240"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "280"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "275"
+       },
+       {
+        "action_type": "lead",
+        "value": "12"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "12"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "4"
+       }
+      ],
+      "date_start": "2026-02-26",
+      "date_stop": "2026-03-04",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "29.166667"
+       }
+      ]
+     },
+     {
+      "campaign_id": "c101",
+      "campaign_name": "Leads: Skin offer",
+      "ad_id": "a102",
+      "ad_name": "Testimonial carousel",
+      "spend": "200.00",
+      "impressions": "9500",
+      "inline_link_clicks": "90",
+      "ctr": "1.515789",
+      "cpm": "21.052632",
+      "frequency": "3.166667",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "90"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "130"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "125"
+       },
+       {
+        "action_type": "lead",
+        "value": "6"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "6"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "2"
+       }
+      ],
+      "date_start": "2026-02-26",
+      "date_stop": "2026-03-04",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "33.333333"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     },
+     "next": "demo://act_DEMO_UK|insights|ad|2026-02-26#1"
+    }
+   },
+   {
+    "data": [
+     {
+      "campaign_id": "c101",
+      "campaign_name": "Leads: Skin offer",
+      "ad_id": "a103",
+      "ad_name": "Price static",
+      "spend": "60.00",
+      "impressions": "3000",
+      "inline_link_clicks": "25",
+      "ctr": "1.333333",
+      "cpm": "20.000000",
+      "frequency": "1.500000",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "25"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "65"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "60"
+       },
+       {
+        "action_type": "lead",
+        "value": "1"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "1"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "1"
+       }
+      ],
+      "date_start": "2026-02-26",
+      "date_stop": "2026-03-04",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "60.000000"
+       }
+      ]
+     },
+     {
+      "campaign_id": "c102",
+      "campaign_name": "Leads: Free consult",
+      "ad_id": "a104",
+      "ad_name": "Founder talking head",
+      "spend": "140.00",
+      "impressions": "6800",
+      "inline_link_clicks": "55",
+      "ctr": "1.294118",
+      "cpm": "20.588235",
+      "frequency": "1.743590",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "55"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "95"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "90"
+       },
+       {
+        "action_type": "lead",
+        "value": "4"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "4"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "1"
+       }
+      ],
+      "date_start": "2026-02-26",
+      "date_stop": "2026-03-04",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "35.000000"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_US|insights|account|2026-03-05": [
+   {
+    "data": [
+     {
+      "account_id": "demo_usd",
+      "account_name": "Demo Clinic US",
+      "account_currency": "USD",
+      "spend": "910.00",
+      "impressions": "45000",
+      "inline_link_clicks": "440",
+      "ctr": "1.564444",
+      "cpm": "20.222222",
+      "frequency": "2.960526",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "440"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "480"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "475"
+       },
+       {
+        "action_type": "lead",
+        "value": "5"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "5"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "1"
+       }
+      ],
+      "date_start": "2026-03-05",
+      "date_stop": "2026-03-11",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "182.000000"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_US|insights|campaign|2026-03-05": [
+   {
+    "data": [
+     {
+      "campaign_id": "c201",
+      "campaign_name": "Leads: New patient offer",
+      "spend": "910.00",
+      "impressions": "45000",
+      "inline_link_clicks": "440",
+      "ctr": "1.564444",
+      "cpm": "20.222222",
+      "frequency": "2.786378",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "440"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "480"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "475"
+       },
+       {
+        "action_type": "lead",
+        "value": "5"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "5"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "1"
+       }
+      ],
+      "date_start": "2026-03-05",
+      "date_stop": "2026-03-11",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "182.000000"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_US|insights|ad|2026-03-05": [
+   {
+    "data": [
+     {
+      "campaign_id": "c201",
+      "campaign_name": "Leads: New patient offer",
+      "ad_id": "a201",
+      "ad_name": "Offer video 30s",
+      "spend": "610.00",
+      "impressions": "30000",
+      "inline_link_clicks": "300",
+      "ctr": "1.600000",
+      "cpm": "20.333333",
+      "frequency": "2.500000",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "300"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "340"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "335"
+       },
+       {
+        "action_type": "lead",
+        "value": "3"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "3"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "1"
+       }
+      ],
+      "date_start": "2026-03-05",
+      "date_stop": "2026-03-11",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "203.333333"
+       }
+      ]
+     },
+     {
+      "campaign_id": "c201",
+      "campaign_name": "Leads: New patient offer",
+      "ad_id": "a202",
+      "ad_name": "Review screenshot",
+      "spend": "300.00",
+      "impressions": "15000",
+      "inline_link_clicks": "140",
+      "ctr": "1.493333",
+      "cpm": "20.000000",
+      "frequency": "2.142857",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "140"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "180"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "175"
+       },
+       {
+        "action_type": "lead",
+        "value": "2"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "2"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "1"
+       }
+      ],
+      "date_start": "2026-03-05",
+      "date_stop": "2026-03-11",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "150.000000"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_US|insights|account|2026-02-26": [
+   {
+    "data": [
+     {
+      "account_id": "demo_usd",
+      "account_name": "Demo Clinic US",
+      "account_currency": "USD",
+      "spend": "850.00",
+      "impressions": "42000",
+      "inline_link_clicks": "440",
+      "ctr": "1.676190",
+      "cpm": "20.238095",
+      "frequency": "2.822581",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "440"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "480"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "475"
+       },
+       {
+        "action_type": "lead",
+        "value": "17"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "17"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "5"
+       }
+      ],
+      "date_start": "2026-02-26",
+      "date_stop": "2026-03-04",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "50.000000"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_US|insights|campaign|2026-02-26": [
+   {
+    "data": [
+     {
+      "campaign_id": "c201",
+      "campaign_name": "Leads: New patient offer",
+      "spend": "850.00",
+      "impressions": "42000",
+      "inline_link_clicks": "440",
+      "ctr": "1.676190",
+      "cpm": "20.238095",
+      "frequency": "2.656546",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "440"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "480"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "475"
+       },
+       {
+        "action_type": "lead",
+        "value": "17"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "17"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "5"
+       }
+      ],
+      "date_start": "2026-02-26",
+      "date_stop": "2026-03-04",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "50.000000"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_US|insights|ad|2026-02-26": [
+   {
+    "data": [
+     {
+      "campaign_id": "c201",
+      "campaign_name": "Leads: New patient offer",
+      "ad_id": "a201",
+      "ad_name": "Offer video 30s",
+      "spend": "560.00",
+      "impressions": "28000",
+      "inline_link_clicks": "290",
+      "ctr": "1.657143",
+      "cpm": "20.000000",
+      "frequency": "2.372881",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "290"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "330"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "325"
+       },
+       {
+        "action_type": "lead",
+        "value": "11"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "11"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "3"
+       }
+      ],
+      "date_start": "2026-02-26",
+      "date_stop": "2026-03-04",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "50.909091"
+       }
+      ]
+     },
+     {
+      "campaign_id": "c201",
+      "campaign_name": "Leads: New patient offer",
+      "ad_id": "a202",
+      "ad_name": "Review screenshot",
+      "spend": "290.00",
+      "impressions": "14000",
+      "inline_link_clicks": "150",
+      "ctr": "1.714286",
+      "cpm": "20.714286",
+      "frequency": "2.058824",
+      "actions": [
+       {
+        "action_type": "link_click",
+        "value": "150"
+       },
+       {
+        "action_type": "page_engagement",
+        "value": "190"
+       },
+       {
+        "action_type": "post_engagement",
+        "value": "185"
+       },
+       {
+        "action_type": "lead",
+        "value": "6"
+       },
+       {
+        "action_type": "onsite_conversion.lead_grouped",
+        "value": "6"
+       },
+       {
+        "action_type": "offsite_conversion.fb_pixel_lead",
+        "value": "2"
+       }
+      ],
+      "date_start": "2026-02-26",
+      "date_stop": "2026-03-04",
+      "cost_per_action_type": [
+       {
+        "action_type": "lead",
+        "value": "48.333333"
+       }
+      ]
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_UK|campaigns": [
+   {
+    "data": [
+     {
+      "id": "c101",
+      "name": "Leads: Skin offer",
+      "effective_status": "ACTIVE",
+      "daily_budget": "10000"
+     },
+     {
+      "id": "c102",
+      "name": "Leads: Free consult",
+      "effective_status": "ACTIVE",
+      "daily_budget": "5000"
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ],
+  "act_DEMO_US|campaigns": [
+   {
+    "data": [
+     {
+      "id": "c201",
+      "name": "Leads: New patient offer",
+      "effective_status": "ACTIVE",
+      "lifetime_budget": "500000"
+     }
+    ],
+    "paging": {
+     "cursors": {
+      "before": "QVFIUjEx",
+      "after": "QVFIUjk5"
+     }
+    }
+   }
+  ]
+ }
+}

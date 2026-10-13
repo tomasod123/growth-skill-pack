@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>{{PAGE_TITLE}} · {{CLIENT_NAME}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Design tokens (inlined). Swap these for your own brand tokens (e.g. ~/.claude/brand/tokens.css). --brand = client primary. */
+:root{--t-warm-900:#1A1A19;--t-accent-900:#115E59;--t-accent-800:#0F766E;--t-accent-700:#0D9488;--t-accent-100:#CCFBF1;--t-accent-50:#F0FDFA;
+ --t-ink-900:#0F172A;--t-ink-700:#334155;--t-ink-500:#64748B;--t-ink-300:#E2E8F0;--t-bg:#F7F7F5;--t-surface:#FFFFFF;--t-surface-2:#F1F5F9;
+ --t-success:#059669;--t-warning:#B45309;--t-danger:#B91C1C;--brand:{{CLIENT_PRIMARY}};
+ --ref-col:420px;
+ --r:12px;--r-s:8px;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--display:'Inter',system-ui,sans-serif;--ui:'Inter',system-ui,sans-serif}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+/* a class that sets display beats the UA [hidden] rule, so state it once, loudly */
+[hidden]{display:none!important}
+body{margin:0;background:var(--t-bg);color:var(--t-ink-900);font-family:var(--ui);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--t-accent-800);text-underline-offset:2px}p{margin:0 0 12px}p:last-child{margin-bottom:0}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.02em;margin:0}
+h1{font-size:34px;line-height:1.1;font-weight:700}h2{font-size:24px;font-weight:700}h3{font-size:17px;font-weight:600}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px 80px}
+.eyebrow{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--t-accent-800)}
+.chip{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;background:var(--t-accent-50);color:var(--t-accent-900);border:1px solid var(--t-accent-100);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0}
+.chip.plain{background:var(--t-surface);color:var(--t-ink-700);border-color:var(--t-ink-300)}
+.chip.hot{background:#FEF3C7;color:var(--t-warning);border-color:#FCD34D}.chip:empty{display:none}
+.pill{display:inline-block;background:#D1FAE5;color:#065F46;border:1px solid #6EE7B7;font-size:12px;font-weight:600;border-radius:999px;padding:1px 10px;margin-left:6px;vertical-align:middle}
+.badge{position:absolute;top:10px;left:10px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.06em;background:rgba(26,26,25,.86);color:#fff;border-radius:999px;padding:4px 10px}
+/* sticky filming-kit nav */
+.kit-nav{position:sticky;top:0;z-index:30;background:rgba(248,248,247,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--t-ink-300)}
+.kit-top{max-width:1100px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.kit-brand{display:flex;align-items:center;gap:11px;margin-right:auto}.kit-brand img{height:28px;width:auto;max-width:140px;object-fit:contain}
+.kit-brand span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--t-ink-500)}
+.progress{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;color:var(--t-ink-700)}
+.bar{width:96px;height:5px;border-radius:999px;background:var(--t-ink-300);overflow:hidden}.bar-fill{height:100%;background:var(--brand);width:0;transition:width .4s}
+.tabs{max-width:1100px;margin:0 auto;padding:0 18px 10px;display:flex;gap:7px;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--t-ink-300);background:var(--t-surface);font-size:12.5px;font-weight:500;color:var(--t-ink-700);text-decoration:none}
+.tab.is-active{background:var(--t-accent-800);border-color:var(--t-accent-800);color:#fff}
+/* hero + panels */
+.hero{padding:44px 0 22px}.hero h1{margin:8px 0 12px}.lead{font-size:17px;color:var(--t-ink-700);max-width:720px}
+.howto{background:var(--t-surface);border:1px solid var(--t-ink-300);border-radius:var(--r);padding:18px 20px;margin:20px 0;max-width:720px}
+.panel-title{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--t-accent-800);display:block;margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:var(--r-s);font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent}
+.btn-primary{background:var(--t-accent-800);color:#fff;box-shadow:0 4px 14px rgba(30,64,175,.28)}.btn-outline{background:var(--t-surface);color:var(--t-ink-900);border-color:var(--t-ink-300)}
+.btn-sm{min-height:36px;padding:0 13px;font-size:13.5px}.hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:12px 0}@media(max-width:760px){.two-col{grid-template-columns:1fr}}
+.panel{background:var(--t-surface);border:1px solid var(--t-ink-300);border-radius:var(--r);padding:20px 22px}
+.stat-row{display:grid;grid-template-columns:78px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid var(--t-ink-300);font-size:15px}.stat-row:last-of-type{border-bottom:0}
+.stat-count{font-family:var(--mono);font-weight:600;color:var(--t-accent-800);font-size:13px;padding-top:2px}
+.pf-item{display:flex;gap:12px;font-size:15px;margin:8px 0}.pf-num{font-family:var(--mono);color:var(--t-accent-800);font-weight:600;font-size:12px;padding-top:3px}
+.recipe{background:var(--t-accent-50);border:1px solid var(--t-accent-100);border-radius:var(--r);padding:18px 22px;font-size:17px;color:var(--t-accent-900);margin:22px 0}
+.sect{margin:48px 0 14px}.sect .n{font-family:var(--mono);font-size:12px;color:var(--t-accent-800);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
+.sect .lead{font-size:16px;margin-top:7px}
+/* group + script cards */
+.group{margin-top:40px}.group-head{border-bottom:2px solid var(--brand);padding-bottom:10px;margin-bottom:14px}
+.ad{background:var(--t-surface);border:1px solid var(--t-ink-300);border-left:4px solid var(--brand);border-radius:var(--r);padding:22px 24px;margin:16px 0;scroll-margin-top:110px}
+.ad-num{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--t-accent-800);font-weight:600}
+.ad-title{font-size:23px;margin:2px 0 8px}.ad-source{font-size:13px;color:var(--t-ink-500);display:block;margin-top:2px}
+/* LAYOUT RULE, do not flip it:
+   LEFT column  = the script the client films (the work).
+   RIGHT column = the competitor example, and it is the LARGER media well of the two.
+   On a phone the example stacks ABOVE the script (order:-1) so they see what they are
+   copying before they read the words. min-width:0 stops a wide child pushing the page sideways. */
+.ad-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,var(--ref-col));gap:26px;align-items:start;margin-top:14px}
+.ad-cols>*{min-width:0}
+@media(max-width:1040px){.ad-cols{grid-template-columns:minmax(0,1fr) minmax(0,340px)}}
+@media(max-width:760px){.ad-cols{grid-template-columns:1fr}.ad-ref{order:-1}}
+.colhead{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--t-ink-500);border-bottom:1px solid var(--t-ink-300);padding-bottom:6px;margin-bottom:11px}
+.colhead b{color:var(--t-ink-900)}
+.block{margin:0 0 14px}.block-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--t-accent-800);display:block;margin-bottom:4px}
+.say{font-family:var(--display);font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px}
+.lines p{margin:0 0 6px}
+.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 18px;background:var(--t-bg);border-radius:var(--r-s);padding:12px 14px;font-size:14px;margin:6px 0 14px}
+.specs div b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--t-ink-500);margin-bottom:2px}
+.good{border:1px solid #6EE7B7;background:#ECFDF5;color:#065F46;border-radius:var(--r-s);padding:11px 14px;font-size:14.5px}
+.shot{background:var(--t-bg);border-radius:var(--r-s);padding:11px 14px;font-size:14.5px;color:var(--t-ink-700)}
+.ad-do{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}.filehint{font-family:var(--mono);font-size:12px;color:var(--t-ink-500);margin:0}
+.tickbtn{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 13px;border-radius:var(--r-s);border:1px solid var(--t-ink-300);background:var(--t-surface);font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.tickbtn[aria-pressed="true"]{background:#ECFDF5;border-color:#6EE7B7;color:#065F46}
+.refvid{position:relative}.refvid video,.refvid img{width:100%;aspect-ratio:9/16;object-fit:cover;background:var(--t-warm-900);border-radius:var(--r-s);display:block;max-height:620px}
+.refcap{font-size:12.5px;color:var(--t-ink-500);margin-top:7px}.refcap b{color:var(--t-ink-700)}
+.refnote{display:block;margin-top:8px;padding:9px 11px;background:var(--t-bg);border-radius:var(--r-s);font-size:12.5px;line-height:1.5;color:var(--t-ink-700)}
+.callout{border-radius:var(--r-s);padding:12px 15px;margin:14px 0;font-size:14.5px;border:1px solid var(--t-accent-100);background:var(--t-accent-50);color:var(--t-accent-900)}
+.callout.warn{background:#FEF3C7;color:var(--t-warning);border-color:#FCD34D}.callout.ok{background:#D1FAE5;color:#065F46;border-color:#6EE7B7}.callout:empty{display:none}
+/* winners + research */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.adcard{background:var(--t-surface);border:1px solid var(--t-ink-300);border-radius:var(--r);overflow:hidden;position:relative}
+.adcard video{width:100%;aspect-ratio:4/5;object-fit:contain;background:var(--t-warm-900);display:block}
+.adcard .refvid video,.adcard .refvid img{aspect-ratio:4/5;object-fit:contain;border-radius:0;max-height:none}
+.adbody{padding:13px 15px 15px}.adname{font-family:var(--display);font-weight:600;font-size:15.5px;margin:2px 0 5px}.adwhy{font-size:14px;color:var(--t-ink-700)}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:15px}th{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--t-ink-500);border-bottom:2px solid var(--t-ink-300);padding:7px 8px 7px 0}
+td{padding:8px 8px 8px 0;border-bottom:1px solid var(--t-ink-300);vertical-align:top}td.n{font-family:var(--mono);white-space:nowrap;font-weight:600}
+ul{margin:8px 0 12px;padding-left:20px}li{margin-bottom:7px}
+.research-toggle{font:inherit;font-size:14px;font-weight:600;background:var(--t-surface);border:1px solid var(--t-ink-300);border-radius:999px;padding:8px 16px;cursor:pointer}
+/* ==========================================================================
+   CLICK TO ENLARGE  (standing rule)
+   EVERY competitor example we put in front of a client opens larger on click or tap,
+   with the ad's detail beside it and two or three lines on why it works. Plain HTML,
+   CSS and vanilla JS, no library. Closes on X, on Escape and on an outside click; the
+   video pauses on close; focus is trapped in the card while it is open and returns to
+   the thing that opened it. Reusable: put .zoom-btn inside any position:relative media
+   well and give it the data-* attributes (see the ENLARGE BUTTON comment below).
+   ========================================================================== */
+.zoom-btn{position:absolute;right:10px;top:10px;z-index:2;display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 13px;border-radius:999px;border:1px solid rgba(255,255,255,.55);background:rgba(26,26,25,.86);color:#fff;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}
+.zoom-btn:hover{background:var(--t-warm-900)}
+.zoom-btn:focus-visible,.zoom-x:focus-visible{outline:3px solid var(--t-accent-700);outline-offset:2px}
+body.zoom-open{overflow:hidden}
+.zoom{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:18px}
+.zoom-back{position:absolute;inset:0;background:rgba(15,23,42,.74)}
+.zoom-card{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,300px) minmax(0,380px);gap:22px;background:var(--t-surface);border:1px solid var(--t-ink-300);border-radius:var(--r);padding:20px;width:min(760px,100%);max-height:calc(100vh - 36px);overflow:auto}
+.zoom-card>*{min-width:0}
+.zoom-media video,.zoom-media img{width:100%;aspect-ratio:9/16;max-height:min(72vh,600px);object-fit:contain;background:var(--t-warm-900);border-radius:var(--r-s);display:block}
+.zoom-x{position:absolute;top:9px;right:9px;z-index:3;width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid var(--t-ink-300);background:var(--t-surface);color:var(--t-ink-900);font:inherit;font-size:19px;line-height:1;cursor:pointer}
+.zoom-title{font-family:var(--display);font-size:19px;font-weight:700;margin:0 40px 10px 0}
+.zoom-meta{display:grid;grid-template-columns:auto minmax(0,1fr);gap:7px 14px;margin:0 0 14px;font-size:14px}
+.zoom-meta dt{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--t-ink-500);padding-top:4px}
+.zoom-meta dd{margin:0;color:var(--t-ink-900)}
+.zoom-why{background:var(--t-bg);border-radius:var(--r-s);padding:12px 14px}
+.zoom-why b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--t-accent-800);margin-bottom:6px}
+.zoom-why ul{margin:0;padding-left:18px;font-size:14.5px}.zoom-why li{margin-bottom:6px;color:var(--t-ink-700)}.zoom-why li:last-child{margin-bottom:0}
+@media(max-width:720px){.zoom{padding:10px}.zoom-card{grid-template-columns:1fr;gap:14px;padding:16px;max-height:calc(100vh - 20px)}.zoom-media video,.zoom-media img{max-height:52vh}}
+footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--t-ink-300);color:var(--t-ink-500);font-size:13px;text-align:center;font-family:var(--mono)}
+@media(max-width:540px){h1{font-size:27px}.ad{padding:18px 16px}.specs{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="kit-nav">
+  <div class="kit-top">
+    <div class="kit-brand"><img src="{{CLIENT_LOGO}}" alt="{{CLIENT_NAME}}"><span>Filming kit</span></div>
+    <div class="progress"><div class="bar"><div class="bar-fill" id="barFill"></div></div><span id="progressLabel">0 of {{TOTAL}} filmed</span></div>
+  </div>
+  <div class="tabs" id="tabs">
+    <!-- BEGIN TAB --><a class="tab" href="#ad{{N}}" data-tab="ad{{N}}">{{N}} &middot; {{TAB_LABEL}}</a><!-- END TAB -->
+    <a class="tab" href="#research" data-tab="research">Why these</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">{{EYEBROW}}</span>
+    <h1>{{H1}}</h1>
+    <p class="lead">{{LEAD}}</p>
+    <div class="howto"><span class="panel-title">How to use this page</span>{{HOWTO}}</div>
+    <div class="hero-cta"><a class="btn btn-primary" href="#ad1">Start with ad 1</a><a class="btn btn-outline" href="{{DRIVE}}" target="_blank" rel="noopener">Open the upload folder</a></div>
+  </header>
+
+  <section class="two-col">
+    <div class="panel">
+      <span class="panel-title">Key things to remember &middot; from {{RESEARCH_N}} ads</span>
+      <!-- BEGIN KEY --><div class="stat-row"><span class="stat-count">{{COUNT}}</span><span>{{TEXT}}</span></div><!-- END KEY -->
+      <p style="margin-top:12px;font-size:14px"><a href="#research">See the full research &darr;</a></p>
+    </div>
+    <div class="panel">
+      <span class="panel-title">Every one of them</span>
+      <div>{{RULES_CHIPS}}</div>
+      <span class="panel-title" style="margin-top:16px">Before filming starts</span>
+      {{BEFORE_FILMING}}
+    </div>
+  </section>
+
+  <div class="recipe"><strong>{{RECIPE}}</strong></div>
+  <div class="callout">{{HOOK_RULE}}</div>
+
+  <!-- BEGIN GROUP -->
+  <section class="group" id="group-{{GROUP_ID}}">
+    <div class="group-head"><span class="eyebrow">Group {{GROUP_ID}}</span><h2>{{GROUP_TITLE}}</h2><p class="lead" style="font-size:15px">{{GROUP_LEAD}}</p></div>
+    <!-- BEGIN SCRIPT -->
+    <section class="ad" id="ad{{N}}">
+      <span class="ad-num">AD {{NN}}</span>
+      <h2 class="ad-title">{{TITLE}}</h2>
+      <div><span class="chip">hook job: {{HOOK_JOB}}</span><span class="chip plain">{{LENGTH}}</span><span class="chip hot">{{HOT}}</span></div>
+      <span class="ad-source">{{SOURCE}}</span>
+      <div class="ad-cols">
+        <div class="ad-script">
+          <div class="colhead"><b>The script</b> &middot; written out in full</div>
+          <div class="block"><span class="block-label">Hook &middot; say this first, we put it on screen too</span><p class="say">&ldquo;{{HOOK}}&rdquo;</p></div>
+          <div class="block"><span class="block-label">Body &middot; then say this</span><div class="lines">{{BODY_LINES}}</div></div>
+          <div class="block"><span class="block-label">Close &middot; finish with (lead form)</span><div class="lines"><p>&ldquo;{{CLOSE}}&rdquo;</p></div></div>
+          <div class="specs">
+            <div><b>On-screen text</b>{{ONSCREEN}}</div>
+            <div><b>Length</b>{{LENGTH}}</div>
+            <div><b>Offer</b>{{OFFER}}</div>
+            <div><b>Lands on</b>{{LANDS_ON}}</div>
+          </div>
+          <div class="block"><span class="block-label">What good looks like</span><div class="good">{{GOOD}}</div></div>
+          <div class="block"><span class="block-label">Setting up the shot</span><div class="shot">{{SHOT}}</div></div>
+          <div class="ad-do">
+            <p class="filehint">Name the file: ad{{N}}-{{SLUG}}.mov</p>
+            <a class="btn btn-outline btn-sm" href="{{DRIVE}}" target="_blank" rel="noopener">Upload</a>
+            <button class="tickbtn" type="button" data-tick="{{N}}" aria-pressed="false"><span aria-hidden="true">&#10003;</span><span class="tick-label">Mark as filmed</span></button>
+          </div>
+        </div>
+        <div class="ad-ref">
+          <div class="colhead"><b>The reference</b> &middot; watch for styling</div>
+          <div class="refvid" data-kind="{{REF_KIND}}">
+            <video muted controls preload="metadata" playsinline poster="media/{{REF_MEDIA}}.jpg" src="media/{{REF_MEDIA}}.mp4"></video>
+            <span class="badge">{{REF_DAYS}} days live</span>
+            <!-- ENLARGE BUTTON · copy this pattern for any competitor example anywhere.
+                 data-media is the path WITHOUT extension (.mp4 + .jpg), data-kind is video|thumb,
+                 data-insights is a JSON array of 2 to 3 lines: why it works, what the client takes. -->
+            <button class="zoom-btn" type="button" data-zoom data-kind="{{REF_KIND}}" data-media="media/{{REF_MEDIA}}"
+              data-advertiser="{{REF_PAGE}}" data-country="{{REF_COUNTRY}}" data-days="{{REF_DAYS}}"
+              data-offer="{{REF_OFFER}}" data-format="{{REF_FORMAT}}" data-insights="{{REF_INSIGHTS}}">
+              <span aria-hidden="true">&#9974;</span> Enlarge
+            </button>
+          </div>
+          <p class="refcap"><b>The ad this is modeled on:</b><br>{{REF_PAGE}} &middot; {{REF_DAYS}} days live &middot; {{REF_LEN}}</p>
+          <span class="refnote"><b>Take the styling, not the words.</b> Watch where they stand, how fast they get to the point, and where the captions sit. The script is already written for you.</span>
+        </div>
+      </div>
+      <div class="callout warn">{{CALLOUT}}</div>
+    </section>
+    <!-- END SCRIPT -->
+  </section>
+  <!-- END GROUP -->
+
+  <div class="callout warn" style="margin-top:28px"><strong>A note on claims:</strong> {{COMPLIANCE_NOTE}}</div>
+
+  <div class="sect"><div class="n">Next step</div><h2>Pick two or three, film them, we do the rest</h2><p class="lead">{{NEXT_STEP}}</p></div>
+
+  <section id="research" style="scroll-margin-top:110px">
+    <div class="sect" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div><div class="n">Why these</div><h2>The research behind the scripts</h2></div>
+      <button class="research-toggle" type="button" id="researchToggle" aria-expanded="false" aria-controls="researchBody">Show &darr;</button>
+    </div>
+    <div id="researchBody" hidden>
+      <p class="lead">{{RESEARCH_INTRO}}</p>
+
+      <div class="sect"><div class="n">Watch the examples</div><h2>The ads we picked, and how long they have run</h2><p class="lead">Picked because they sell the same kind of offer to the same kind of customer as you, in a way you could film on a phone. &ldquo;Days&rdquo; is how long that exact ad has been running continuously, which is evidence it keeps working, not the reason it is here. Real ads, captured from Facebook&rsquo;s public Ads Library. Tap any one to open it larger.</p></div>
+      <div class="grid">
+        <!-- BEGIN WINNER -->
+        <div class="adcard">
+          <div class="refvid" data-kind="video">
+            <video controls preload="metadata" playsinline poster="media/{{MEDIA}}.jpg" src="media/{{MEDIA}}.mp4" style="border-radius:0"></video>
+            <span class="badge">{{DAYS}} days live</span>
+            <button class="zoom-btn" type="button" data-zoom data-kind="video" data-media="media/{{MEDIA}}"
+              data-advertiser="{{PAGE}}" data-country="{{COUNTRY}}" data-days="{{DAYS}}"
+              data-offer="{{OFFER}}" data-format="{{FORMAT}}" data-insights="{{INSIGHTS}}">
+              <span aria-hidden="true">&#9974;</span> Enlarge
+            </button>
+          </div>
+          <div class="adbody"><span class="ad-num">{{RANK}}</span>{{PILL}}<div class="adname">{{PAGE}}</div><p class="adwhy">{{WHY}}</p></div>
+        </div>
+        <!-- END WINNER -->
+      </div>
+
+      <div class="sect"><div class="n">What the research says</div><h2>Patterns across the strongest ads</h2></div>
+      <div class="panel">
+        <div class="tw"><table><thead><tr><th>What the winners do</th><th>How common</th></tr></thead><tbody>
+          <!-- BEGIN PATTERN --><tr><td>{{WHAT}}</td><td class="n">{{COUNT}}</td></tr><!-- END PATTERN -->
+        </tbody></table></div>
+        <h3 style="margin-top:16px">And what never survives</h3>
+        <ul>{{NEVER_SURVIVES}}</ul>
+        <div class="callout ok"><strong>Open lanes nobody is using yet:</strong> {{OPEN_LANES}}</div>
+      </div>
+
+      <div class="panel" style="margin-top:18px">
+        <h3 style="margin-top:0">What the winners actually say (transcribed from the videos above)</h3>
+        <ul><!-- BEGIN TRANSCRIPT --><li><strong>{{LABEL}}:</strong> &ldquo;{{TEXT}}&rdquo;</li><!-- END TRANSCRIPT --></ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>{{FOOTER}}</footer>
+</main>
+
+<!-- CLICK TO ENLARGE overlay · one per page, outside .wrap, filled by the script below -->
+<div class="zoom" id="zoom" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="zoomTitle">
+  <div class="zoom-back" data-zoom-close></div>
+  <div class="zoom-card" id="zoomCard">
+    <button class="zoom-x" type="button" data-zoom-close id="zoomClose" aria-label="Close">&times;</button>
+    <div class="zoom-media">
+      <video id="zoomVideo" controls playsinline preload="metadata"></video>
+      <img id="zoomImg" alt="Reference ad first frame" hidden>
+    </div>
+    <div class="zoom-info">
+      <h3 class="zoom-title" id="zoomTitle">The reference ad</h3>
+      <dl class="zoom-meta" id="zoomMeta"></dl>
+      <div class="zoom-why"><b>Why it works, and what you take from it</b><ul id="zoomWhy"></ul></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){"use strict";
+var KEY="{{STORAGE_KEY}}",TOTAL={{TOTAL}};
+var ticks=[].slice.call(document.querySelectorAll("[data-tick]")),fill=document.getElementById("barFill"),label=document.getElementById("progressLabel");
+var done=[];for(var i=0;i<TOTAL;i++)done.push(false);
+try{var s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&s.done&&s.done.length===TOTAL)done=s.done.map(Boolean);}catch(e){}
+function render(){var n=done.filter(Boolean).length;if(fill)fill.style.width=(TOTAL?n/TOTAL*100:0)+"%";if(label)label.textContent=n+" of "+TOTAL+" filmed";
+ ticks.forEach(function(b){var on=!!done[parseInt(b.getAttribute("data-tick"),10)-1];b.setAttribute("aria-pressed",on?"true":"false");b.querySelector(".tick-label").textContent=on?"Filmed":"Mark as filmed";});}
+ticks.forEach(function(b){b.addEventListener("click",function(){var i=parseInt(b.getAttribute("data-tick"),10)-1;done[i]=!done[i];try{localStorage.setItem(KEY,JSON.stringify({done:done}));}catch(e){}render();});});
+render();
+/* reference cards with no video: swap the <video> for the poster image */
+[].slice.call(document.querySelectorAll('.refvid[data-kind="thumb"] video')).forEach(function(v){var img=document.createElement("img");img.src=v.getAttribute("poster");img.alt="Reference ad first frame";v.parentNode.replaceChild(img,v);});
+var tabs=[].slice.call(document.querySelectorAll(".tab"));
+function active(){var a="";tabs.forEach(function(t){var el=document.getElementById(t.getAttribute("data-tab"));if(el&&el.getBoundingClientRect().top<=160)a=t.getAttribute("data-tab");});tabs.forEach(function(t){t.classList.toggle("is-active",t.getAttribute("data-tab")===a);});}
+window.addEventListener("scroll",active,{passive:true});active();
+/* ---- click to enlarge: overlay for every competitor example ---- */
+var zoom=document.getElementById("zoom"),zCard=document.getElementById("zoomCard"),zX=document.getElementById("zoomClose"),
+    zVid=document.getElementById("zoomVideo"),zImg=document.getElementById("zoomImg"),
+    zTitle=document.getElementById("zoomTitle"),zMeta=document.getElementById("zoomMeta"),zWhy=document.getElementById("zoomWhy"),
+    zOpener=null;
+function zRow(k,v){if(!v)return;var dt=document.createElement("dt");dt.textContent=k;var dd=document.createElement("dd");dd.textContent=v;zMeta.appendChild(dt);zMeta.appendChild(dd);}
+function zOpen(btn){
+  if(!zoom)return;
+  zOpener=btn;
+  var kind=btn.getAttribute("data-kind")||"video",media=btn.getAttribute("data-media")||"",ins=[];
+  try{ins=JSON.parse(btn.getAttribute("data-insights")||"[]")||[];}catch(e){ins=[];}
+  zTitle.textContent=btn.getAttribute("data-advertiser")||"The reference ad";
+  zMeta.innerHTML="";
+  zRow("Advertiser",btn.getAttribute("data-advertiser"));
+  zRow("Country",btn.getAttribute("data-country"));
+  var d=btn.getAttribute("data-days");zRow("Days running",d?d+" days":"");
+  zRow("Their offer",btn.getAttribute("data-offer"));
+  zRow("Format",btn.getAttribute("data-format"));
+  zWhy.innerHTML="";
+  ins.forEach(function(t){var li=document.createElement("li");li.textContent=t;zWhy.appendChild(li);});
+  zWhy.parentNode.hidden=!ins.length;
+  if(kind==="thumb"){zVid.pause();zVid.removeAttribute("src");zVid.hidden=true;zImg.hidden=false;zImg.src=media+".jpg";}
+  else{zImg.hidden=true;zImg.removeAttribute("src");zVid.hidden=false;zVid.setAttribute("poster",media+".jpg");zVid.setAttribute("src",media+".mp4");}
+  zoom.hidden=false;zoom.setAttribute("aria-hidden","false");document.body.classList.add("zoom-open");
+  zX.focus();
+}
+function zClose(){
+  if(!zoom||zoom.hidden)return;
+  try{zVid.pause();}catch(e){}
+  zoom.hidden=true;zoom.setAttribute("aria-hidden","true");document.body.classList.remove("zoom-open");
+  if(zOpener&&zOpener.focus)zOpener.focus();
+  zOpener=null;
+}
+[].slice.call(document.querySelectorAll("[data-zoom]")).forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();zOpen(b);});});
+if(zoom){
+  zoom.addEventListener("click",function(e){var t=e.target;if(t===zoom||(t.hasAttribute&&t.hasAttribute("data-zoom-close")))zClose();});
+  document.addEventListener("keydown",function(e){
+    if(zoom.hidden)return;
+    if(e.key==="Escape"||e.key==="Esc"){e.preventDefault();zClose();return;}
+    if(e.key!=="Tab")return;
+    var f=[].slice.call(zCard.querySelectorAll('a[href],button:not([disabled]),video[controls],input,select,textarea,[tabindex]:not([tabindex="-1"])'))
+            .filter(function(el){return !el.hidden&&el.offsetParent!==null;});
+    if(!f.length){e.preventDefault();return;}
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&(document.activeElement===first||!zCard.contains(document.activeElement))){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&(document.activeElement===last||!zCard.contains(document.activeElement))){e.preventDefault();first.focus();}
+  });
+}
+var tg=document.getElementById("researchToggle"),body=document.getElementById("researchBody");
+if(tg&&body){tg.addEventListener("click",function(){var open=body.hidden;body.hidden=!open;tg.setAttribute("aria-expanded",open?"true":"false");tg.textContent=open?"Hide ↑":"Show ↓";});
+ if(location.hash==="#research"){body.hidden=false;tg.setAttribute("aria-expanded","true");tg.textContent="Hide ↑";}}
+})();
+</script>
+</body>
+</html>

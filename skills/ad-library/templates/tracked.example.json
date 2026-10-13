@@ -1,0 +1,20 @@
+{
+ "_readme": "The weekly refresh list. Copy to <library>/tracked.json and edit. pages = advertisers to re-check every run (page_id from the Ads Library URL view_all_page_id=...). searches = standing keyword sweeps, rotated a slice at a time so the cost stays flat. niche must be one of niche_rules.NICHES (or leave it empty and the classifier decides).",
+ "actor": "curious_coder~facebook-ads-library-scraper",
+ "price_per_ad_usd": 0.00075,
+ "budget_usd": 2.0,
+ "hard_cap_usd": 10.0,
+ "ads_per_page_run": 25,
+ "ads_per_search_run": 60,
+ "searches_per_week": 8,
+ "pages": [
+  {"page_id": "PAGE_ID_HERE", "page_name": "Competitor One", "country": "GB", "client": "clinic-a", "niche": "skin", "offer": "free consultation"},
+  {"page_id": "PAGE_ID_HERE_2", "page_name": "Competitor Two", "country": "US", "client": "my-saas", "niche": "healthcare-software", "offer": "book a demo"}
+ ],
+ "searches": [
+  {"country": "GB", "term": "skin consultation"},
+  {"country": "GB", "term": "free consultation"},
+  {"country": "US", "term": "ai scribe"},
+  {"country": "US", "term": "book a demo"}
+ ]
+}

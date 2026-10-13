@@ -1,0 +1,8 @@
+client_name: Demo Clinic
+greeting_name: Dr Demo
+prepared_by: Example Growth Team
+logo: logo.svg
+colors:
+  primary: "#0F5257"
+  accent: "#E0A458"
+font: Lato

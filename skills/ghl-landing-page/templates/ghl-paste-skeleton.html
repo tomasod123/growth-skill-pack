@@ -1,0 +1,113 @@
+<style>body,html{background:#14161A!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ALL CSS goes above the markup. GHL paints before late style blocks parse (layout shift). */
+
+/* GHL wrapper resets: GHL wraps a paste in section/row/column/custom-code wrappers with
+   default borders, padding and margins. :has() kills them only around this block. */
+.c-section:has(.lp-root),.c-wrapper:has(.lp-root),.c-row:has(.lp-root),.c-column:has(.lp-root),
+div[data-element-type]:has(.lp-root),.hl_page-creator--custom-code:has(.lp-root),
+.custom-code-section:has(.lp-root){border:0!important;outline:0!important;box-shadow:none!important;
+  background:transparent!important;padding:0!important;margin:0!important}
+/* GHL also clamps the row's .inner child to ~1170px even with full-width rows on */
+.c-section:has(.lp-root)>.inner,.c-row:has(.lp-root)>.inner,.c-column:has(.lp-root)>.inner,
+div:has(>.lp-root)>.inner{max-width:none!important;width:100%!important}
+.lp-root iframe{border:0!important;outline:0!important;box-shadow:none!important}
+
+/* Metric-matched fallback so the swap to the web font does not re-wrap lines (CLS).
+   Tune size-adjust until fallback and web font give the same line count. */
+@font-face{font-family:"Inter fb";src:local("Arial"),local("Liberation Sans");size-adjust:107%;
+  ascent-override:90%;descent-override:22%;line-gap-override:0%}
+
+/* Tokens: declare every variable you use, at the top level (never only inside @media). */
+.lp-root{
+  --brand:#2F5D50;          /* deep brand colour: white text on it must pass 4.5:1 */
+  --brand-ink:#FFFFFF;
+  --bg:#14161A;
+  --surface:#F7F7F5;        /* card background: off-white, not pure white */
+  --text:rgba(255,255,255,.86);
+  --muted:rgba(255,255,255,.62);
+  --radius:12px;
+  --font:"Inter","Inter fb",system-ui,-apple-system,sans-serif;
+  --sticky-h:64px;
+  box-sizing:border-box;font-family:var(--font);background:var(--bg);color:var(--text);
+  line-height:1.5;-webkit-font-smoothing:antialiased;
+}
+.lp-root *,.lp-root *::before,.lp-root *::after{box-sizing:border-box}
+.lp-hero{max-width:1080px;margin:0 auto;padding:40px 20px}
+.lp-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.lp-root h1{font:700 clamp(30px,4.4vw,48px)/1.1 var(--font);margin:0 0 12px;color:#fff;
+  font-variant-numeric:lining-nums}
+.lp-sub{margin:0 0 20px;color:var(--muted);font-size:18px}
+.lp-card{background:var(--surface);color:#111;border-radius:var(--radius);padding:20px}
+/* Reserve the embed's settled height on the WRAPPER (not the iframe) so it cannot shift */
+.lp-form-wrap{min-height:420px}
+.lp-logo{height:28px;width:auto}
+.lp-sticky{display:none}
+
+@media (max-width:767px){
+  .lp-hero{padding:20px 16px calc(var(--sticky-h) + 24px)}
+  /* Form straight after the H1 on phones */
+  .lp-grid{display:flex;flex-direction:column;gap:16px}
+  .lp-copy{display:contents}
+  .lp-copy h1{order:1}
+  .lp-card{order:2}
+  .lp-copy .lp-rest{order:3}
+  .lp-sticky{display:flex;position:fixed;left:0;right:0;bottom:0;height:var(--sticky-h);gap:8px;
+    padding:10px 12px;background:var(--bg);border-top:1px solid rgba(255,255,255,.12);z-index:50;
+    transition:transform .2s}
+  .lp-sticky.is-hidden{transform:translateY(110%)}
+  .lp-sticky a{flex:1;display:flex;align-items:center;justify-content:center;border-radius:10px;
+    font-weight:600;text-decoration:none;color:var(--brand-ink);background:var(--brand)}
+  .lp-sticky a.lp-call{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff}
+}
+</style>
+
+<div class="lp-root">
+  <section class="lp-hero">
+    <img class="lp-logo" src="https://example.com/logo.webp" width="120" height="28" alt="Business name">
+    <div class="lp-grid">
+      <div class="lp-copy">
+        <h1>Headline that mirrors the ad</h1>
+        <div class="lp-rest">
+          <p class="lp-sub">One line on what happens after they send the form.</p>
+        </div>
+      </div>
+      <div class="lp-card" id="lp-form">
+        <div class="lp-form-wrap">
+          <!-- Paste the survey/form/calendar iframe from GHL's embed dialog here.
+               Set data-cookie-consent="false" unless the page has a real cookie banner. -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="lp-sticky" aria-label="Quick contact">
+    <a class="lp-call" href="tel:+10000000000">Call us</a>
+    <a href="#lp-form" data-scroll-form>Send a request</a>
+  </nav>
+</div>
+
+<script>
+(function(){
+  var bar=document.querySelector('.lp-root .lp-sticky');
+  var form=document.getElementById('lp-form');
+  if(!bar||!form||!('IntersectionObserver' in window))return;
+  /* Hide the sticky bar while the form is on screen so it never covers Next/Submit */
+  new IntersectionObserver(function(es){
+    bar.classList.toggle('is-hidden',es[0].isIntersecting);
+  },{threshold:0.15}).observe(form);
+  var go=bar.querySelector('[data-scroll-form]');
+  go.addEventListener('click',function(e){
+    e.preventDefault();
+    /* If the page has an exit-intent pop-up, hold it while this scroll runs */
+    form.setAttribute('data-hold','1');
+    form.scrollIntoView({behavior:'smooth',block:'start'});
+    setTimeout(function(){form.removeAttribute('data-hold');},1500);
+  });
+})();
+</script>
+<!-- If embedding a GHL form/survey/calendar, add the exact embed script tag (form_embed) from
+     GHL's embed dialog here (your GHL or white-label domain). -->

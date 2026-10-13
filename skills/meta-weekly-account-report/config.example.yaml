@@ -1,0 +1,26 @@
+# Copy to config.yaml and edit. One entry per ad account.
+# Each account reports in its own currency. Totals are grouped by currency, never summed across them.
+
+graph_version: v26.0          # Meta Graph API version. Bump when Meta retires it.
+
+accounts:
+  - id: act_YOUR_AD_ACCOUNT_ID   # keep the act_ prefix
+    name: Example Clinic UK      # any label you like
+    currency: GBP                # the account's billing currency
+    target_cpl: 40               # your target cost per lead in that currency. Leave out to skip kill checks.
+
+  # - id: act_YOUR_SECOND_ACCOUNT_ID
+  #   name: Example Clinic US
+  #   currency: USD
+  #   target_cpl: 60
+
+defaults:
+  min_leads_for_best: 3       # an ad needs at least this many leads to be "best ad"
+  kill_multiplier: 2.0        # kill candidate: spend >= 2x target CPL with 0 leads, or CPL > 2x target
+  fatigue_frequency: 4.0      # frequency at or above this = fatigue flag
+  drop_threshold: 0.40        # sudden drop: leads fell 40%+ ...
+  spend_held_ratio: 0.90      # ... while spend stayed at 90%+ of last week
+  fetch_budgets: true         # read campaign daily budgets for pacing
+  pacing_under: 0.80          # under 80% of weekly budget spent = underspending
+  pacing_over: 1.15           # over 115% = overspending
+  output_dir: reports         # relative to the skill folder

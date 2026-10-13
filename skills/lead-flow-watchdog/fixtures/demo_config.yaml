@@ -1,0 +1,33 @@
+# Config used by --demo. Mirrors config.example.yaml.
+demo_day: 2026-03-10
+timezone: UTC
+ghl_page_limit: 20          # small on purpose so the demo pages through results
+
+businesses:
+  - name: Demo Clinic North
+    currency: GBP
+    target_cpl: 30
+    meta_ad_account_id: act_DEMO_NORTH
+    ghl: {location_id: loc_demo_north, token_env: GHL_TOKEN}
+    meta_lead_rules: &rules
+      tags: [facebook lead]
+      sources: [facebook, instagram]
+      utm_sources: [facebook, fb, instagram, ig]
+  - name: Demo Clinic South
+    currency: GBP
+    target_cpl: 40
+    meta_ad_account_id: act_DEMO_SOUTH
+    ghl: {location_id: loc_demo_south, token_env: GHL_TOKEN}
+    meta_lead_rules: *rules
+  - name: Demo Clinic East
+    currency: USD
+    target_cpl: 60
+    meta_ad_account_id: act_DEMO_EAST
+    ghl: {location_id: loc_demo_east, token_env: GHL_TOKEN}
+    meta_lead_rules: *rules
+  - name: Demo Clinic West
+    currency: USD
+    target_cpl: 50
+    meta_ad_account_id: act_DEMO_WEST
+    ghl: {location_id: loc_demo_west, token_env: GHL_TOKEN}
+    meta_lead_rules: *rules

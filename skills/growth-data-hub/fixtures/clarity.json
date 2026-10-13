@@ -1,0 +1,275 @@
+{
+ "num_days": 3,
+ "metrics": [
+  {
+   "metricName": "Traffic",
+   "information": [
+    {
+     "totalSessionCount": "410",
+     "totalBotSessionCount": "45",
+     "distantUserCount": "352",
+     "PagesPerSessionPercentage": 1.4,
+     "Url": "https://www.example.com/consult"
+    },
+    {
+     "totalSessionCount": "260",
+     "totalBotSessionCount": "28",
+     "distantUserCount": "223",
+     "PagesPerSessionPercentage": 1.4,
+     "Url": "https://www.example.com/book"
+    },
+    {
+     "totalSessionCount": "380",
+     "totalBotSessionCount": "42",
+     "distantUserCount": "326",
+     "PagesPerSessionPercentage": 1.4,
+     "Url": "https://www.example.com/"
+    },
+    {
+     "totalSessionCount": "95",
+     "totalBotSessionCount": "10",
+     "distantUserCount": "81",
+     "PagesPerSessionPercentage": 1.4,
+     "Url": "https://www.example.com/pricing"
+    },
+    {
+     "totalSessionCount": "70",
+     "totalBotSessionCount": "7",
+     "distantUserCount": "60",
+     "PagesPerSessionPercentage": 1.4,
+     "Url": "https://www.example.com/blog/what-to-expect"
+    },
+    {
+     "totalSessionCount": "12",
+     "totalBotSessionCount": "1",
+     "distantUserCount": "10",
+     "PagesPerSessionPercentage": 1.4,
+     "Url": "https://www.example.com/thank-you"
+    }
+   ]
+  },
+  {
+   "metricName": "ScrollDepth",
+   "information": [
+    {
+     "averageScrollDepth": 31.0,
+     "Url": "https://www.example.com/consult"
+    },
+    {
+     "averageScrollDepth": 64.0,
+     "Url": "https://www.example.com/book"
+    },
+    {
+     "averageScrollDepth": 47.0,
+     "Url": "https://www.example.com/"
+    },
+    {
+     "averageScrollDepth": 58.0,
+     "Url": "https://www.example.com/pricing"
+    },
+    {
+     "averageScrollDepth": 72.0,
+     "Url": "https://www.example.com/blog/what-to-expect"
+    },
+    {
+     "averageScrollDepth": 40.0,
+     "Url": "https://www.example.com/thank-you"
+    }
+   ]
+  },
+  {
+   "metricName": "EngagementTime",
+   "information": [
+    {
+     "totalTime": "28700",
+     "activeTime": "12710",
+     "Url": "https://www.example.com/consult"
+    },
+    {
+     "totalTime": "18200",
+     "activeTime": "8060",
+     "Url": "https://www.example.com/book"
+    },
+    {
+     "totalTime": "26600",
+     "activeTime": "11780",
+     "Url": "https://www.example.com/"
+    },
+    {
+     "totalTime": "6650",
+     "activeTime": "2945",
+     "Url": "https://www.example.com/pricing"
+    },
+    {
+     "totalTime": "4900",
+     "activeTime": "2170",
+     "Url": "https://www.example.com/blog/what-to-expect"
+    },
+    {
+     "totalTime": "840",
+     "activeTime": "372",
+     "Url": "https://www.example.com/thank-you"
+    }
+   ]
+  },
+  {
+   "metricName": "DeadClickCount",
+   "information": [
+    {
+     "sessionsCount": "410",
+     "sessionsWithMetricPercentage": 14.2,
+     "sessionsWithoutMetricPercentage": 85.8,
+     "pagesViews": "533",
+     "subTotal": "97",
+     "Url": "https://www.example.com/consult"
+    },
+    {
+     "sessionsCount": "260",
+     "sessionsWithMetricPercentage": 3.1,
+     "sessionsWithoutMetricPercentage": 96.9,
+     "pagesViews": "338",
+     "subTotal": "13",
+     "Url": "https://www.example.com/book"
+    },
+    {
+     "sessionsCount": "380",
+     "sessionsWithMetricPercentage": 5.5,
+     "sessionsWithoutMetricPercentage": 94.5,
+     "pagesViews": "494",
+     "subTotal": "34",
+     "Url": "https://www.example.com/"
+    },
+    {
+     "sessionsCount": "95",
+     "sessionsWithMetricPercentage": 6.0,
+     "sessionsWithoutMetricPercentage": 94.0,
+     "pagesViews": "123",
+     "subTotal": "9",
+     "Url": "https://www.example.com/pricing"
+    },
+    {
+     "sessionsCount": "70",
+     "sessionsWithMetricPercentage": 1.0,
+     "sessionsWithoutMetricPercentage": 99.0,
+     "pagesViews": "91",
+     "subTotal": "1",
+     "Url": "https://www.example.com/blog/what-to-expect"
+    },
+    {
+     "sessionsCount": "12",
+     "sessionsWithMetricPercentage": 30.0,
+     "sessionsWithoutMetricPercentage": 70.0,
+     "pagesViews": "15",
+     "subTotal": "6",
+     "Url": "https://www.example.com/thank-you"
+    }
+   ]
+  },
+  {
+   "metricName": "RageClickCount",
+   "information": [
+    {
+     "sessionsCount": "410",
+     "sessionsWithMetricPercentage": 5.1,
+     "sessionsWithoutMetricPercentage": 94.9,
+     "pagesViews": "533",
+     "subTotal": "26",
+     "Url": "https://www.example.com/consult"
+    },
+    {
+     "sessionsCount": "260",
+     "sessionsWithMetricPercentage": 0.8,
+     "sessionsWithoutMetricPercentage": 99.2,
+     "pagesViews": "338",
+     "subTotal": "2",
+     "Url": "https://www.example.com/book"
+    },
+    {
+     "sessionsCount": "380",
+     "sessionsWithMetricPercentage": 1.2,
+     "sessionsWithoutMetricPercentage": 98.8,
+     "pagesViews": "494",
+     "subTotal": "5",
+     "Url": "https://www.example.com/"
+    },
+    {
+     "sessionsCount": "95",
+     "sessionsWithMetricPercentage": 1.9,
+     "sessionsWithoutMetricPercentage": 98.1,
+     "pagesViews": "123",
+     "subTotal": "2",
+     "Url": "https://www.example.com/pricing"
+    },
+    {
+     "sessionsCount": "70",
+     "sessionsWithMetricPercentage": 0.0,
+     "sessionsWithoutMetricPercentage": 100.0,
+     "pagesViews": "91",
+     "subTotal": "0",
+     "Url": "https://www.example.com/blog/what-to-expect"
+    },
+    {
+     "sessionsCount": "12",
+     "sessionsWithMetricPercentage": 9.0,
+     "sessionsWithoutMetricPercentage": 91.0,
+     "pagesViews": "15",
+     "subTotal": "1",
+     "Url": "https://www.example.com/thank-you"
+    }
+   ]
+  },
+  {
+   "metricName": "QuickbackClick",
+   "information": [
+    {
+     "sessionsCount": "410",
+     "sessionsWithMetricPercentage": 22.4,
+     "sessionsWithoutMetricPercentage": 77.6,
+     "pagesViews": "533",
+     "subTotal": "91",
+     "Url": "https://www.example.com/consult"
+    },
+    {
+     "sessionsCount": "260",
+     "sessionsWithMetricPercentage": 7.9,
+     "sessionsWithoutMetricPercentage": 92.1,
+     "pagesViews": "338",
+     "subTotal": "20",
+     "Url": "https://www.example.com/book"
+    },
+    {
+     "sessionsCount": "380",
+     "sessionsWithMetricPercentage": 12.0,
+     "sessionsWithoutMetricPercentage": 88.0,
+     "pagesViews": "494",
+     "subTotal": "45",
+     "Url": "https://www.example.com/"
+    },
+    {
+     "sessionsCount": "95",
+     "sessionsWithMetricPercentage": 19.3,
+     "sessionsWithoutMetricPercentage": 80.7,
+     "pagesViews": "123",
+     "subTotal": "18",
+     "Url": "https://www.example.com/pricing"
+    },
+    {
+     "sessionsCount": "70",
+     "sessionsWithMetricPercentage": 9.0,
+     "sessionsWithoutMetricPercentage": 91.0,
+     "pagesViews": "91",
+     "subTotal": "6",
+     "Url": "https://www.example.com/blog/what-to-expect"
+    },
+    {
+     "sessionsCount": "12",
+     "sessionsWithMetricPercentage": 40.0,
+     "sessionsWithoutMetricPercentage": 60.0,
+     "pagesViews": "15",
+     "subTotal": "4",
+     "Url": "https://www.example.com/thank-you"
+    }
+   ]
+  }
+ ]
+}

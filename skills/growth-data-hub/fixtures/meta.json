@@ -1,0 +1,338 @@
+{
+ "campaigns": [
+  {
+   "spend": "2600.00",
+   "impressions": "210000",
+   "clicks": "4320",
+   "inline_link_clicks": "2700",
+   "frequency": "2.3448",
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "2700"
+    },
+    {
+     "action_type": "lead",
+     "value": "74"
+    },
+    {
+     "action_type": "onsite_conversion.lead_grouped",
+     "value": "74"
+    },
+    {
+     "action_type": "offsite_conversion.fb_pixel_lead",
+     "value": "71"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "8100"
+    }
+   ],
+   "date_start": "2026-09-15",
+   "date_stop": "2026-10-12",
+   "campaign_id": "c1",
+   "campaign_name": "Consult offer - broad"
+  },
+  {
+   "spend": "650.00",
+   "impressions": "48000",
+   "clicks": "1312",
+   "inline_link_clicks": "820",
+   "frequency": "1.9470",
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "820"
+    },
+    {
+     "action_type": "lead",
+     "value": "31"
+    },
+    {
+     "action_type": "onsite_conversion.lead_grouped",
+     "value": "31"
+    },
+    {
+     "action_type": "offsite_conversion.fb_pixel_lead",
+     "value": "28"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "2460"
+    }
+   ],
+   "date_start": "2026-09-15",
+   "date_stop": "2026-10-12",
+   "campaign_id": "c2",
+   "campaign_name": "Retargeting - site visitors"
+  },
+  {
+   "spend": "900.00",
+   "impressions": "140000",
+   "clicks": "1120",
+   "inline_link_clicks": "700",
+   "frequency": "3.0971",
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "700"
+    },
+    {
+     "action_type": "lead",
+     "value": "18"
+    },
+    {
+     "action_type": "onsite_conversion.lead_grouped",
+     "value": "18"
+    },
+    {
+     "action_type": "offsite_conversion.fb_pixel_lead",
+     "value": "15"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "2100"
+    }
+   ],
+   "date_start": "2026-09-15",
+   "date_stop": "2026-10-12",
+   "campaign_id": "c3",
+   "campaign_name": "Video - patient stories"
+  }
+ ],
+ "ads": [
+  {
+   "spend": "1150.00",
+   "impressions": "88000",
+   "clicks": "2096",
+   "inline_link_clicks": "1310",
+   "frequency": "1.7666",
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "1310"
+    },
+    {
+     "action_type": "lead",
+     "value": "41"
+    },
+    {
+     "action_type": "onsite_conversion.lead_grouped",
+     "value": "41"
+    },
+    {
+     "action_type": "offsite_conversion.fb_pixel_lead",
+     "value": "38"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "3930"
+    }
+   ],
+   "date_start": "2026-09-15",
+   "date_stop": "2026-10-12",
+   "ad_id": "a11",
+   "ad_name": "Video - doctor explains consult",
+   "campaign_id": "c1",
+   "campaign_name": "Consult offer - broad"
+  },
+  {
+   "spend": "890.00",
+   "impressions": "70000",
+   "clicks": "1376",
+   "inline_link_clicks": "860",
+   "frequency": "2.8325",
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "860"
+    },
+    {
+     "action_type": "lead",
+     "value": "29"
+    },
+    {
+     "action_type": "onsite_conversion.lead_grouped",
+     "value": "29"
+    },
+    {
+     "action_type": "offsite_conversion.fb_pixel_lead",
+     "value": "26"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "2580"
+    }
+   ],
+   "date_start": "2026-09-15",
+   "date_stop": "2026-10-12",
+   "ad_id": "a12",
+   "ad_name": "Static - before and after grid",
+   "campaign_id": "c1",
+   "campaign_name": "Consult offer - broad"
+  },
+  {
+   "spend": "300.00",
+   "impressions": "30000",
+   "clicks": "368",
+   "inline_link_clicks": "230",
+   "frequency": "2.4411",
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "230"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "690"
+    }
+   ],
+   "date_start": "2026-09-15",
+   "date_stop": "2026-10-12",
+   "ad_id": "a13",
+   "ad_name": "Static - price list v1",
+   "campaign_id": "c1",
+   "campaign_name": "Consult offer - broad"
+  },
+  {
+   "spend": "260.00",
+   "impressions": "22000",
+   "clicks": "480",
+   "inline_link_clicks": "300",
+   "frequency": "1.7334",
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "300"
+    },
+    {
+     "action_type": "lead",
+     "value": "4"
+    },
+    {
+     "action_type": "onsite_conversion.lead_grouped",
+     "value": "4"
+    },
+    {
+     "action_type": "offsite_conversion.fb_pixel_lead",
+     "value": "1"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "900"
+    }
+   ],
+   "date_start": "2026-09-15",
+   "date_stop": "2026-10-12",
+   "ad_id": "a14",
+   "ad_name": "Carousel - 3 reasons",
+   "campaign_id": "c1",
+   "campaign_name": "Consult offer - broad"
+  },
+  {
+   "spend": "650.00",
+   "impressions": "48000",
+   "clicks": "1312",
+   "inline_link_clicks": "820",
+   "frequency": "2.7671",
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "820"
+    },
+    {
+     "action_type": "lead",
+     "value": "31"
+    },
+    {
+     "action_type": "onsite_conversion.lead_grouped",
+     "value": "31"
+    },
+    {
+     "action_type": "offsite_conversion.fb_pixel_lead",
+     "value": "28"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "2460"
+    }
+   ],
+   "date_start": "2026-09-15",
+   "date_stop": "2026-10-12",
+   "ad_id": "a21",
+   "ad_name": "Retarget - testimonial quote",
+   "campaign_id": "c2",
+   "campaign_name": "Retargeting - site visitors"
+  },
+  {
+   "spend": "610.00",
+   "impressions": "95000",
+   "clicks": "752",
+   "inline_link_clicks": "470",
+   "frequency": "1.6862",
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "470"
+    },
+    {
+     "action_type": "lead",
+     "value": "12"
+    },
+    {
+     "action_type": "onsite_conversion.lead_grouped",
+     "value": "12"
+    },
+    {
+     "action_type": "offsite_conversion.fb_pixel_lead",
+     "value": "9"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "1410"
+    }
+   ],
+   "date_start": "2026-09-15",
+   "date_stop": "2026-10-12",
+   "ad_id": "a31",
+   "ad_name": "Video - patient story long",
+   "campaign_id": "c3",
+   "campaign_name": "Video - patient stories"
+  },
+  {
+   "spend": "290.00",
+   "impressions": "45000",
+   "clicks": "368",
+   "inline_link_clicks": "230",
+   "frequency": "2.5974",
+   "actions": [
+    {
+     "action_type": "link_click",
+     "value": "230"
+    },
+    {
+     "action_type": "lead",
+     "value": "6"
+    },
+    {
+     "action_type": "onsite_conversion.lead_grouped",
+     "value": "6"
+    },
+    {
+     "action_type": "offsite_conversion.fb_pixel_lead",
+     "value": "3"
+    },
+    {
+     "action_type": "page_engagement",
+     "value": "690"
+    }
+   ],
+   "date_start": "2026-09-15",
+   "date_stop": "2026-10-12",
+   "ad_id": "a32",
+   "ad_name": "Video - patient story short",
+   "campaign_id": "c3",
+   "campaign_name": "Video - patient stories"
+  }
+ ]
+}

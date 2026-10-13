@@ -1,0 +1,7 @@
+{
+  "business_description": "a growth team selling clinical software to healthcare providers (or: a marketing agency for hair transplant clinics)",
+  "team_names": ["Your Name", "Your Setter", "Your Media Buyer", "Your Account Manager"],
+  "consent_seed": {"clinic_a": "written", "clinic_b": "verbal", "customer_c": "none"},
+  "model": "sonnet",
+  "min_rating": 3
+}

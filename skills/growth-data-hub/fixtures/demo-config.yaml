@@ -1,0 +1,74 @@
+# growth-data-hub config. Copy to config.yaml and fill in. Secrets never go here; they live in .env.
+business_name: "Demo Clinic"
+currency: "USD"          # shown next to every money figure; never mix accounts in different currencies
+days: 28                 # default window (ending yesterday); --days overrides it
+
+meta:
+  enabled: true
+  ad_account_id: "act_demo"   # Ads Manager > account dropdown; the number after act_
+  api_version: "v26.0"                      # bump when Meta retires it (they publish dates in the changelog)
+  lead_action_type: "lead"                  # exact action_type counted as a lead. Do not change to a substring.
+
+google_ads:
+  enabled: true
+  customer_id: "demo"           # 10 digits, top right of the Google Ads UI (dashes are fine)
+  api_version: "v25"
+
+ga4:
+  enabled: true
+  property_id: "0"       # Admin > Property details > PROPERTY ID (numbers only, not G-XXXX)
+
+clarity:
+  enabled: true
+  num_days: 3                               # 1, 2 or 3. Clarity's export only goes back 3 days.
+
+ghl:
+  enabled: true
+  location_id: "demo"           # Settings > Business Profile (or the id in the sub-account URL)
+  pipelines: []                             # empty = all pipelines; or list names, e.g. ["Sales pipeline"]
+  calendars: []                             # empty = all calendars; or list the names of your sales-call calendars
+  appointments_days_ahead: 21               # also count calls booked for up to N days after the window
+  # Which pipeline STAGE NAMES mean what. Exact names, any case. An opportunity with status "won" always counts as won.
+  stages:
+    booked: ["Call booked", "Appointment booked", "Booked"]
+    showed: ["Showed", "Call completed", "Consult done"]
+    no_show: ["No show", "No-show"]
+    won: ["Won", "Closed won", "Paid"]
+    lost: ["Lost", "Not a fit"]
+
+# Who does what. Shown next to each action. Use names or roles.
+owners:
+  media_buyer: "Media buyer"
+  web_owner: "Landing page owner"
+  sales_lead: "Sales lead / setter"
+  crm_admin: "CRM admin"
+  analytics_owner: "Analytics owner"
+  growth_lead: "Growth lead"
+
+# How each paid channel is recognised in GA4 (regex on "source / medium", lowercase) and in the CRM.
+# CRM rules are OR'ed: click id, GHL session source, utm_source (+ utm_medium if listed), tags, contact source text.
+# Anything that matches nothing is "Organic and other".
+channels:
+  - key: meta
+    label: Meta ads
+    platform: meta
+    ga4_source_medium:
+      - '^(facebook|fb|ig|instagram|meta|l\.facebook\.com|m\.facebook\.com)\s*/\s*(paid|cpc|paid_social|paidsocial|ads|social_paid)$'
+    ghl:
+      click_id: fbclid
+      session_source: ["paid social"]
+      utm_source: ["facebook", "fb", "ig", "instagram", "meta"]
+      tags: ["facebook lead", "meta lead"]
+      source_contains: ["facebook", "instagram", "lead form"]
+  - key: google_ads
+    label: Google Ads
+    platform: google_ads
+    ga4_source_medium:
+      - '^google\s*/\s*cpc$'
+    ghl:
+      click_id: gclid
+      session_source: ["paid search"]
+      utm_source: ["google", "adwords"]
+      utm_medium: ["cpc", "ppc", "paid", "paid_search"]
+      tags: ["google ads lead"]
+      source_contains: ["google ads", "adwords"]

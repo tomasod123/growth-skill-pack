@@ -1,0 +1,25 @@
+{
+  "_readme": "Your numbers, not ours: every value ships null and a null check is skipped (AUDIT.md lists it as 'threshold not set, skipped'). Copy to thresholds.json and fill each from your own last 90 days (Ads Manager, ad level, date range = last 90 days, columns: amount spent, leads, cost per lead, link CTR, frequency, 3-second video plays, impressions) plus your unit economics. Keys starting with _ are ignored.",
+  "_how_to_set": {
+    "target_cpl": "The CPL you can afford: work back from what a customer is worth (first payment x margin x lead-to-customer rate), or use your median ad-level CPL over 90 days if that already pays back.",
+    "kill_cpl_multiple": "Look at ads that eventually got leads: how much had they spent, as a multiple of target CPL, when the first lead came? Pick a multiple above most of them so you rarely kill a late starter.",
+    "min_spend_no_target": "Only used while target_cpl is null: a spend amount in account currency after which a zero-lead ad is worth a look (for example your 90-day median spend per first lead).",
+    "kill_ctr_below_pct": "Link CTR (%) of your bottom quarter of ads over 90 days; a zero-lead ad below it is weak on leading indicators too.",
+    "hook_rate_floor_pct": "3-second video plays / impressions x 100 per video ad over 90 days; use the bottom-quarter value as the floor.",
+    "frequency_ceiling_local": "Local mode: the 7-day frequency at which your past local campaigns' cost per lead started climbing.",
+    "max_radius_miles_local": "Local mode: the distance (miles) that covers most of your existing customers' home postcodes / zip codes.",
+    "min_ads_per_adset": "The fewest genuinely different concepts you are willing to launch an ad set with (below it = P1).",
+    "target_ads_per_adset": "How many distinct concepts you aim to have live per ad set once running (below it = P2). Scale it with budget.",
+    "min_daily_budget_per_ad": "Daily budget per ad (account currency) below which ads in your account rarely got enough delivery to judge in a week: check ads with fewer than a few leads after 7 days and their daily spend."
+  },
+  "target_cpl": null,
+  "kill_cpl_multiple": null,
+  "min_spend_no_target": null,
+  "kill_ctr_below_pct": null,
+  "hook_rate_floor_pct": null,
+  "frequency_ceiling_local": null,
+  "max_radius_miles_local": null,
+  "min_ads_per_adset": null,
+  "target_ads_per_adset": null,
+  "min_daily_budget_per_ad": null
+}

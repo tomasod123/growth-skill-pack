@@ -1,0 +1,4 @@
+PERSON: the founder of the business, appearing as an adviser, never as a clinician (no scrubs, no needle, never treating anyone).
+LOOK: [age range, hair, build, glasses or not]. Carry the expression in the reference photographs exactly; name the one feature that matters most: [FEATURE] IS THE MOST IMPORTANT THING TO CARRY ACROSS: match it precisely, do not flatten or neutralise it.
+WARDROBE: [default outfit: plain, well fitted, no logos; describe colour and garment]. ALWAYS FORBIDDEN: scrubs, lab coat, gloves, mask, any medical uniform, a polo shirt, a shiny suit, any logo or lettering on clothing.
+SETTING DEFAULT: [office, clinic reception, video call desk].

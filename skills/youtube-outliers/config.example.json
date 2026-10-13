@@ -1,0 +1,13 @@
+{
+  "niche_description": "clinical AI software for hospital and clinic operations leaders (or: hair transplant results and costs for men 28-50)",
+  "own_keywords": ["clinical documentation AI", "ambient scribe", "EHR workflow", "hair transplant results", "FUE vs FUT"],
+  "own_channels": ["@competitorchannel", "UCxxxxxxxxxxxxxxxxxxxxxx"],
+  "adjacent_keywords": ["how to scale a business", "sales tips", "marketing funnel strategy", "lead generation tips", "founder productivity"],
+  "adjacent_channels": ["@AlexHormozi", "@MyFirstMillionPod", "@starterstory"],
+  "own_niche_terms": ["ehr", "scribe", "clinical", "hair transplant", "fue", "hairline"],
+  "exclude_terms": [],
+  "min_views": 1000,
+  "per_keyword": 30,
+  "per_channel": 15,
+  "channel_sample": 15
+}

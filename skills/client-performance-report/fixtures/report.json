@@ -1,0 +1,900 @@
+{
+ "generated": "2026-10-13 11:45 UTC",
+ "demo": true,
+ "business": "Demo Clinic",
+ "currency": "USD",
+ "window": {
+  "start": "2026-09-15",
+  "end": "2026-10-12",
+  "days": 28
+ },
+ "sources": {
+  "meta": {
+   "state": "ok",
+   "why": "demo fixture"
+  },
+  "google_ads": {
+   "state": "ok",
+   "why": "demo fixture"
+  },
+  "ga4": {
+   "state": "ok",
+   "why": "demo fixture"
+  },
+  "clarity": {
+   "state": "ok",
+   "why": "demo fixture"
+  },
+  "ghl": {
+   "state": "ok",
+   "why": "demo fixture"
+  }
+ },
+ "funnel": {
+  "channels": [
+   {
+    "key": "meta",
+    "label": "Meta ads",
+    "platform": "meta",
+    "spend": 4150.0,
+    "impressions": 398000,
+    "clicks": 4220,
+    "sessions": 3300,
+    "platform_leads": 123.0,
+    "lead_source": "crm",
+    "leads": 95,
+    "booked": 14,
+    "showed": 9,
+    "no_show": 3,
+    "won": 3,
+    "has_platform_data": true,
+    "ctr": 0.010603015075376884,
+    "click_to_session": 0.7819905213270142,
+    "session_to_lead": 0.02878787878787879,
+    "lead_to_booked": 0.14736842105263157,
+    "show_rate": 0.75,
+    "showed_to_won": 0.3333333333333333,
+    "cpl": 43.68421052631579,
+    "cost_per_booked": 296.42857142857144,
+    "cost_per_showed": 461.1111111111111,
+    "cost_per_won": 1383.3333333333333
+   },
+   {
+    "key": "google_ads",
+    "label": "Google Ads",
+    "platform": "google_ads",
+    "spend": 2400.0,
+    "impressions": 70400,
+    "clicks": 1280,
+    "sessions": 1150,
+    "platform_leads": 52.0,
+    "lead_source": "crm",
+    "leads": 48,
+    "booked": 22,
+    "showed": 16,
+    "no_show": 3,
+    "won": 6,
+    "has_platform_data": true,
+    "ctr": 0.04728260869565217,
+    "click_to_session": 0.8984375,
+    "session_to_lead": 0.04173913043478261,
+    "lead_to_booked": 0.4583333333333333,
+    "show_rate": 0.8421052631578947,
+    "showed_to_won": 0.375,
+    "cpl": 50.0,
+    "cost_per_booked": 109.0909090909091,
+    "cost_per_showed": 150.0,
+    "cost_per_won": 400.0
+   },
+   {
+    "key": "other",
+    "label": "Organic and other",
+    "platform": null,
+    "spend": 0.0,
+    "impressions": 0,
+    "clicks": 0,
+    "sessions": 3325,
+    "platform_leads": null,
+    "lead_source": "crm",
+    "leads": 31,
+    "booked": 10,
+    "showed": 7,
+    "no_show": 1,
+    "won": 3,
+    "has_platform_data": false,
+    "ctr": null,
+    "click_to_session": null,
+    "session_to_lead": 0.009323308270676692,
+    "lead_to_booked": 0.3225806451612903,
+    "show_rate": 0.875,
+    "showed_to_won": 0.42857142857142855,
+    "cpl": null,
+    "cost_per_booked": null,
+    "cost_per_showed": null,
+    "cost_per_won": null
+   }
+  ],
+  "total": {
+   "key": "total",
+   "label": "All channels",
+   "platform": null,
+   "lead_source": "crm",
+   "spend": 6550.0,
+   "impressions": 468400,
+   "clicks": 5500,
+   "leads": 174,
+   "sessions": 7775,
+   "platform_leads": 175.0,
+   "booked": 46,
+   "showed": 32,
+   "no_show": 7,
+   "won": 12,
+   "ctr": 0.011742100768573868,
+   "click_to_session": 0.8090909090909091,
+   "session_to_lead": 0.02237942122186495,
+   "lead_to_booked": 0.26436781609195403,
+   "show_rate": 0.8205128205128205,
+   "showed_to_won": 0.375,
+   "cpl": 37.64367816091954,
+   "cost_per_booked": 142.3913043478261,
+   "cost_per_showed": 204.6875,
+   "cost_per_won": 545.8333333333334
+  }
+ },
+ "constraint": {
+  "type": "stage",
+  "stage": "lead_to_booked",
+  "channel": "meta",
+  "label": "Meta ads",
+  "value": 0.14736842105263157,
+  "benchmark": 0.3,
+  "gap": 0.5087719298245614,
+  "severity": 0.5767376456408195,
+  "metric": "Booking rate (leads to booked calls)",
+  "trigger": "Meta ads: booking rate (leads to booked calls) 14.7% vs at least 30.0%",
+  "action": "Tighten speed to lead for Meta ads: call within 5 minutes, then a 3-touch SMS and email follow-up for anyone not booked",
+  "owner": "Sales lead / setter",
+  "minutes": 60
+ },
+ "actions": [
+  {
+   "type": "stage",
+   "stage": "lead_to_booked",
+   "channel": "meta",
+   "label": "Meta ads",
+   "value": 0.14736842105263157,
+   "benchmark": 0.3,
+   "gap": 0.5087719298245614,
+   "severity": 0.5767376456408195,
+   "metric": "Booking rate (leads to booked calls)",
+   "trigger": "Meta ads: booking rate (leads to booked calls) 14.7% vs at least 30.0%",
+   "action": "Tighten speed to lead for Meta ads: call within 5 minutes, then a 3-touch SMS and email follow-up for anyone not booked",
+   "owner": "Sales lead / setter",
+   "minutes": 60
+  },
+  {
+   "type": "ad",
+   "stage": "kill_ad",
+   "channel": "meta",
+   "label": "Static - price list v1",
+   "value": 300.0,
+   "benchmark": 120,
+   "gap": 3.0,
+   "severity": 1.0,
+   "metric": "spend with zero leads",
+   "trigger": "Ad 'Static - price list v1' spent USD 300 with 0 leads (2x the CPL target)",
+   "action": "Pause ad 'Static - price list v1'",
+   "owner": "Media buyer",
+   "minutes": 5
+  },
+  {
+   "type": "page",
+   "stage": "page",
+   "channel": "meta",
+   "label": "/consult",
+   "value": 14.2,
+   "benchmark": 8,
+   "gap": 0.7749999999999999,
+   "severity": 0.85,
+   "metric": "dead clicks",
+   "trigger": "/consult: dead clicks 14.2% vs at most 8% (410 Clarity sessions, last 3 days); 100% of its GA4 sessions come from Meta ads",
+   "action": "Watch 10 Clarity recordings of /consult filtered to dead clicks, then fix the element people fight with (often an unclickable image, a hidden form or a slow embed)",
+   "owner": "Landing page owner",
+   "minutes": 60
+  },
+  {
+   "type": "search",
+   "stage": "lost_is_budget",
+   "channel": "google_ads",
+   "label": "Search - treatment terms",
+   "value": 0.32,
+   "benchmark": 0.15,
+   "gap": 0.17,
+   "severity": 0.5700000000000001,
+   "metric": "search impression share lost to budget",
+   "trigger": "'Search - treatment terms' loses 32.0% of searches to budget at USD 34.15 per conversion",
+   "action": "Raise the daily budget of 'Search - treatment terms' by 20% (it converts under target and runs out of money)",
+   "owner": "Media buyer",
+   "minutes": 10
+  },
+  {
+   "type": "search",
+   "stage": "lost_is_rank",
+   "channel": "google_ads",
+   "label": "Search - competitor terms",
+   "value": 0.55,
+   "benchmark": 0.35,
+   "gap": 0.20000000000000007,
+   "severity": 0.5,
+   "metric": "search impression share lost to rank",
+   "trigger": "'Search - competitor terms' loses 55.0% of searches to ad rank",
+   "action": "Improve ad rank on 'Search - competitor terms': tighter ad groups, keyword in headline 1, landing page that repeats the search term; then review bids",
+   "owner": "Media buyer",
+   "minutes": 60
+  }
+ ],
+ "findings": [
+  {
+   "type": "ad",
+   "stage": "kill_ad",
+   "channel": "meta",
+   "label": "Static - price list v1",
+   "value": 300.0,
+   "benchmark": 120,
+   "gap": 3.0,
+   "severity": 1.0,
+   "metric": "spend with zero leads",
+   "trigger": "Ad 'Static - price list v1' spent USD 300 with 0 leads (2x the CPL target)",
+   "action": "Pause ad 'Static - price list v1'",
+   "owner": "Media buyer",
+   "minutes": 5
+  },
+  {
+   "type": "page",
+   "stage": "page",
+   "channel": "meta",
+   "label": "/consult",
+   "value": 14.2,
+   "benchmark": 8,
+   "gap": 0.7749999999999999,
+   "severity": 0.85,
+   "metric": "dead clicks",
+   "trigger": "/consult: dead clicks 14.2% vs at most 8% (410 Clarity sessions, last 3 days); 100% of its GA4 sessions come from Meta ads",
+   "action": "Watch 10 Clarity recordings of /consult filtered to dead clicks, then fix the element people fight with (often an unclickable image, a hidden form or a slow embed)",
+   "owner": "Landing page owner",
+   "minutes": 60
+  },
+  {
+   "type": "stage",
+   "stage": "lead_to_booked",
+   "channel": "meta",
+   "label": "Meta ads",
+   "value": 0.14736842105263157,
+   "benchmark": 0.3,
+   "gap": 0.5087719298245614,
+   "severity": 0.5767376456408195,
+   "metric": "Booking rate (leads to booked calls)",
+   "trigger": "Meta ads: booking rate (leads to booked calls) 14.7% vs at least 30.0%",
+   "action": "Tighten speed to lead for Meta ads: call within 5 minutes, then a 3-touch SMS and email follow-up for anyone not booked",
+   "owner": "Sales lead / setter",
+   "minutes": 60
+  },
+  {
+   "type": "search",
+   "stage": "lost_is_budget",
+   "channel": "google_ads",
+   "label": "Search - treatment terms",
+   "value": 0.32,
+   "benchmark": 0.15,
+   "gap": 0.17,
+   "severity": 0.5700000000000001,
+   "metric": "search impression share lost to budget",
+   "trigger": "'Search - treatment terms' loses 32.0% of searches to budget at USD 34.15 per conversion",
+   "action": "Raise the daily budget of 'Search - treatment terms' by 20% (it converts under target and runs out of money)",
+   "owner": "Media buyer",
+   "minutes": 10
+  },
+  {
+   "type": "search",
+   "stage": "lost_is_rank",
+   "channel": "google_ads",
+   "label": "Search - competitor terms",
+   "value": 0.55,
+   "benchmark": 0.35,
+   "gap": 0.20000000000000007,
+   "severity": 0.5,
+   "metric": "search impression share lost to rank",
+   "trigger": "'Search - competitor terms' loses 55.0% of searches to ad rank",
+   "action": "Improve ad rank on 'Search - competitor terms': tighter ad groups, keyword in headline 1, landing page that repeats the search term; then review bids",
+   "owner": "Media buyer",
+   "minutes": 60
+  },
+  {
+   "type": "stage",
+   "stage": "session_to_lead",
+   "channel": "meta",
+   "label": "Meta ads",
+   "value": 0.02878787878787879,
+   "benchmark": 0.05,
+   "gap": 0.42424242424242425,
+   "severity": 0.4809160305343511,
+   "metric": "Landing page conversion (sessions to leads)",
+   "trigger": "Meta ads: landing page conversion (sessions to leads) 2.9% vs at least 5.0%",
+   "action": "Fix the main Meta ads landing page: one offer, one form above the fold, cut fields",
+   "owner": "Landing page owner",
+   "minutes": 120
+  },
+  {
+   "type": "page",
+   "stage": "page",
+   "channel": "other",
+   "label": "/pricing",
+   "value": 19.3,
+   "benchmark": 15,
+   "gap": 0.28666666666666674,
+   "severity": 0.336,
+   "metric": "quick backs",
+   "trigger": "/pricing: quick backs 19.3% vs at most 15% (95 Clarity sessions, last 3 days); 68% of its GA4 sessions come from organic and other",
+   "action": "Watch 10 Clarity recordings of /pricing filtered to quick backs, then fix the element people fight with (often an unclickable image, a hidden form or a slow embed)",
+   "owner": "Landing page owner",
+   "minutes": 60
+  },
+  {
+   "type": "ad",
+   "stage": "scale",
+   "channel": "meta",
+   "label": "Retargeting - site visitors",
+   "value": 20.967741935483872,
+   "benchmark": 42.0,
+   "gap": 0,
+   "severity": 0.3,
+   "metric": "campaign cost per lead",
+   "trigger": "Campaign 'Retargeting - site visitors' CPL USD 20.97 on 31 leads (30%+ under target)",
+   "action": "Scale 'Retargeting - site visitors' budget by 20% and hold for 3 days before the next change",
+   "owner": "Media buyer",
+   "minutes": 10
+  },
+  {
+   "type": "cost",
+   "stage": "cost_per_booked",
+   "channel": "meta",
+   "label": "Meta ads",
+   "value": 296.42857142857144,
+   "benchmark": 200,
+   "gap": 0.4821428571428572,
+   "severity": 0.2892857142857143,
+   "metric": "cost per booked call",
+   "trigger": "Meta ads: cost per booked call USD 296 vs target USD 200",
+   "action": "Cut the most expensive Meta ads campaigns or ads first; see the step with the biggest drop",
+   "owner": "Media buyer",
+   "minutes": 30
+  },
+  {
+   "type": "stage",
+   "stage": "session_to_lead",
+   "channel": "google_ads",
+   "label": "Google Ads",
+   "value": 0.04173913043478261,
+   "benchmark": 0.05,
+   "gap": 0.16521739130434782,
+   "severity": 0.1431463657484235,
+   "metric": "Landing page conversion (sessions to leads)",
+   "trigger": "Google Ads: landing page conversion (sessions to leads) 4.2% vs at least 5.0%",
+   "action": "Fix the main Google Ads landing page: one offer, one form above the fold, cut fields",
+   "owner": "Landing page owner",
+   "minutes": 120
+  },
+  {
+   "type": "lead_gap",
+   "stage": "lead_gap",
+   "channel": "meta",
+   "label": "Meta ads",
+   "value": 0.7723577235772358,
+   "benchmark": 0.8,
+   "gap": 0.03455284552845536,
+   "severity": 0.041463414634146434,
+   "metric": "leads reaching the CRM",
+   "trigger": "Meta ads reports 123 leads, the CRM got 95 (77.2%)",
+   "action": "Reconcile Meta ads leads with the CRM: check every lead form is mapped, the integration is connected, and how many were merged into existing contacts (same email or phone)",
+   "owner": "CRM admin",
+   "minutes": 30
+  }
+ ],
+ "pages": [
+  {
+   "path": "/consult",
+   "url": "https://www.example.com/consult",
+   "sessions": 410,
+   "bot_sessions": 45,
+   "scroll_depth": 31.0,
+   "active_time_s": 12710.0,
+   "dead_click_pct": 14.2,
+   "rage_click_pct": 5.1,
+   "quickback_pct": 22.4,
+   "problems": [
+    [
+     "dead_click_pct",
+     14.2,
+     8,
+     0.7749999999999999
+    ],
+    [
+     "rage_click_pct",
+     5.1,
+     3,
+     0.6999999999999998
+    ],
+    [
+     "quickback_pct",
+     22.4,
+     15,
+     0.49333333333333323
+    ],
+    [
+     "scroll_depth",
+     31.0,
+     40,
+     0.225
+    ]
+   ],
+   "score": 2.193333333333333,
+   "channel_mix": {
+    "meta": 1.0
+   }
+  },
+  {
+   "path": "/pricing",
+   "url": "https://www.example.com/pricing",
+   "sessions": 95,
+   "bot_sessions": 10,
+   "scroll_depth": 58.0,
+   "active_time_s": 2945.0,
+   "dead_click_pct": 6.0,
+   "rage_click_pct": 1.9,
+   "quickback_pct": 19.3,
+   "problems": [
+    [
+     "quickback_pct",
+     19.3,
+     15,
+     0.28666666666666674
+    ]
+   ],
+   "score": 0.28666666666666674,
+   "channel_mix": {
+    "other": 0.6781609195402298,
+    "google_ads": 0.3218390804597701
+   }
+  }
+ ],
+ "meta": {
+  "totals": {
+   "spend": 4150.0,
+   "impressions": 398000,
+   "clicks": 4220,
+   "leads": 123.0
+  },
+  "campaigns": [
+   {
+    "id": "c1",
+    "name": "Consult offer - broad",
+    "campaign": "Consult offer - broad",
+    "spend": 2600.0,
+    "impressions": 210000,
+    "clicks": 2700,
+    "all_clicks": 4320,
+    "frequency": 2.34,
+    "ctr": 0.012857142857142857,
+    "cpm": 12.380952380952381,
+    "leads": 74.0,
+    "cpl": 35.13513513513514
+   },
+   {
+    "id": "c3",
+    "name": "Video - patient stories",
+    "campaign": "Video - patient stories",
+    "spend": 900.0,
+    "impressions": 140000,
+    "clicks": 700,
+    "all_clicks": 1120,
+    "frequency": 3.1,
+    "ctr": 0.005,
+    "cpm": 6.428571428571429,
+    "leads": 18.0,
+    "cpl": 50.0
+   },
+   {
+    "id": "c2",
+    "name": "Retargeting - site visitors",
+    "campaign": "Retargeting - site visitors",
+    "spend": 650.0,
+    "impressions": 48000,
+    "clicks": 820,
+    "all_clicks": 1312,
+    "frequency": 1.95,
+    "ctr": 0.017083333333333332,
+    "cpm": 13.541666666666668,
+    "leads": 31.0,
+    "cpl": 20.967741935483872
+   }
+  ],
+  "ads": [
+   {
+    "id": "a11",
+    "name": "Video - doctor explains consult",
+    "campaign": "Consult offer - broad",
+    "spend": 1150.0,
+    "impressions": 88000,
+    "clicks": 1310,
+    "all_clicks": 2096,
+    "frequency": 1.77,
+    "ctr": 0.014886363636363637,
+    "cpm": 13.068181818181817,
+    "leads": 41.0,
+    "cpl": 28.048780487804876
+   },
+   {
+    "id": "a12",
+    "name": "Static - before and after grid",
+    "campaign": "Consult offer - broad",
+    "spend": 890.0,
+    "impressions": 70000,
+    "clicks": 860,
+    "all_clicks": 1376,
+    "frequency": 2.83,
+    "ctr": 0.012285714285714285,
+    "cpm": 12.714285714285715,
+    "leads": 29.0,
+    "cpl": 30.689655172413794
+   },
+   {
+    "id": "a21",
+    "name": "Retarget - testimonial quote",
+    "campaign": "Retargeting - site visitors",
+    "spend": 650.0,
+    "impressions": 48000,
+    "clicks": 820,
+    "all_clicks": 1312,
+    "frequency": 2.77,
+    "ctr": 0.017083333333333332,
+    "cpm": 13.541666666666668,
+    "leads": 31.0,
+    "cpl": 20.967741935483872
+   },
+   {
+    "id": "a31",
+    "name": "Video - patient story long",
+    "campaign": "Video - patient stories",
+    "spend": 610.0,
+    "impressions": 95000,
+    "clicks": 470,
+    "all_clicks": 752,
+    "frequency": 1.69,
+    "ctr": 0.004947368421052632,
+    "cpm": 6.421052631578947,
+    "leads": 12.0,
+    "cpl": 50.833333333333336
+   },
+   {
+    "id": "a13",
+    "name": "Static - price list v1",
+    "campaign": "Consult offer - broad",
+    "spend": 300.0,
+    "impressions": 30000,
+    "clicks": 230,
+    "all_clicks": 368,
+    "frequency": 2.44,
+    "ctr": 0.007666666666666666,
+    "cpm": 10.0,
+    "leads": 0,
+    "cpl": null
+   },
+   {
+    "id": "a32",
+    "name": "Video - patient story short",
+    "campaign": "Video - patient stories",
+    "spend": 290.0,
+    "impressions": 45000,
+    "clicks": 230,
+    "all_clicks": 368,
+    "frequency": 2.6,
+    "ctr": 0.005111111111111111,
+    "cpm": 6.444444444444445,
+    "leads": 6.0,
+    "cpl": 48.333333333333336
+   },
+   {
+    "id": "a14",
+    "name": "Carousel - 3 reasons",
+    "campaign": "Consult offer - broad",
+    "spend": 260.0,
+    "impressions": 22000,
+    "clicks": 300,
+    "all_clicks": 480,
+    "frequency": 1.73,
+    "ctr": 0.013636363636363636,
+    "cpm": 11.818181818181818,
+    "leads": 4.0,
+    "cpl": 65.0
+   }
+  ]
+ },
+ "google_ads": {
+  "totals": {
+   "spend": 2400.0,
+   "clicks": 1280,
+   "impressions": 70400,
+   "leads": 52.0,
+   "ctr": 0.04728260869565217,
+   "lost_is_budget": 0.23,
+   "lost_is_rank": 0.2633333333333333
+  },
+  "campaigns": [
+   {
+    "id": "g1",
+    "name": "Search - treatment terms",
+    "status": "ENABLED",
+    "type": "SEARCH",
+    "spend": 1400.0,
+    "clicks": 610,
+    "impressions": 9800,
+    "conversions": 41.0,
+    "ctr": 0.06224489795918367,
+    "cpa": 34.146341463414636,
+    "impression_share": 0.56,
+    "lost_is_budget": 0.32,
+    "lost_is_rank": 0.12
+   },
+   {
+    "id": "g2",
+    "name": "Search - competitor terms",
+    "status": "ENABLED",
+    "type": "SEARCH",
+    "spend": 700.0,
+    "clicks": 260,
+    "impressions": 8600,
+    "conversions": 6.0,
+    "ctr": 0.030232558139534883,
+    "cpa": 116.66666666666667,
+    "impression_share": 0.4,
+    "lost_is_budget": 0.05,
+    "lost_is_rank": 0.55
+   },
+   {
+    "id": "g3",
+    "name": "Performance Max - all",
+    "status": "ENABLED",
+    "type": "PERFORMANCE_MAX",
+    "spend": 300.0,
+    "clicks": 410,
+    "impressions": 52000,
+    "conversions": 5.0,
+    "ctr": 0.007884615384615384,
+    "cpa": 60.0,
+    "impression_share": null,
+    "lost_is_budget": null,
+    "lost_is_rank": null
+   }
+  ],
+  "changes": [
+   {
+    "when": "2026-10-09 16:42:10.5",
+    "what": "CAMPAIGN_BUDGET",
+    "op": "UPDATE",
+    "campaign": "Search - treatment terms"
+   },
+   {
+    "when": "2026-10-02 10:05:51.2",
+    "what": "AD",
+    "op": "CREATE",
+    "campaign": "Search - competitor terms"
+   }
+  ]
+ },
+ "ga4": {
+  "totals": {
+   "sessions": 7775,
+   "engaged": 4170,
+   "key_events": 139.0
+  },
+  "by_source_medium": [
+   {
+    "source_medium": "facebook / paid",
+    "sessions": 2970,
+    "engaged": 1253,
+    "key_events": 58.0,
+    "engagement_rate": 0.42188552188552186
+   },
+   {
+    "source_medium": "google / organic",
+    "sessions": 2100,
+    "engaged": 1263,
+    "key_events": 15.0,
+    "engagement_rate": 0.6014285714285714
+   },
+   {
+    "source_medium": "google / cpc",
+    "sessions": 1150,
+    "engaged": 788,
+    "key_events": 40.0,
+    "engagement_rate": 0.6852173913043478
+   },
+   {
+    "source_medium": "(direct) / (none)",
+    "sessions": 900,
+    "engaged": 550,
+    "key_events": 15.0,
+    "engagement_rate": 0.6111111111111112
+   },
+   {
+    "source_medium": "ig / paid",
+    "sessions": 330,
+    "engaged": 128,
+    "key_events": 7.0,
+    "engagement_rate": 0.3878787878787879
+   },
+   {
+    "source_medium": "instagram.com / referral",
+    "sessions": 160,
+    "engaged": 80,
+    "key_events": 1.0,
+    "engagement_rate": 0.5
+   },
+   {
+    "source_medium": "bing / organic",
+    "sessions": 120,
+    "engaged": 72,
+    "key_events": 1.0,
+    "engagement_rate": 0.6
+   },
+   {
+    "source_medium": "chatgpt.com / referral",
+    "sessions": 45,
+    "engaged": 36,
+    "key_events": 2.0,
+    "engagement_rate": 0.8
+   }
+  ],
+  "by_landing_page": [
+   {
+    "landing_page": "/",
+    "sessions": 2930,
+    "engaged": 1689,
+    "key_events": 29.0,
+    "engagement_rate": 0.5764505119453925
+   },
+   {
+    "landing_page": "/consult",
+    "sessions": 2780,
+    "engaged": 1132,
+    "key_events": 59.0,
+    "engagement_rate": 0.4071942446043165
+   },
+   {
+    "landing_page": "/book",
+    "sessions": 1020,
+    "engaged": 726,
+    "key_events": 40.0,
+    "engagement_rate": 0.711764705882353
+   },
+   {
+    "landing_page": "/blog/what-to-expect",
+    "sessions": 610,
+    "engaged": 335,
+    "key_events": 2.0,
+    "engagement_rate": 0.5491803278688525
+   },
+   {
+    "landing_page": "/pricing",
+    "sessions": 435,
+    "engaged": 288,
+    "key_events": 9.0,
+    "engagement_rate": 0.6620689655172414
+   }
+  ]
+ },
+ "clarity": {
+  "num_days": 3,
+  "pages": [
+   {
+    "path": "/consult",
+    "url": "https://www.example.com/consult",
+    "sessions": 410,
+    "bot_sessions": 45,
+    "scroll_depth": 31.0,
+    "active_time_s": 12710.0,
+    "dead_click_pct": 14.2,
+    "rage_click_pct": 5.1,
+    "quickback_pct": 22.4
+   },
+   {
+    "path": "/",
+    "url": "https://www.example.com/",
+    "sessions": 380,
+    "bot_sessions": 42,
+    "scroll_depth": 47.0,
+    "active_time_s": 11780.0,
+    "dead_click_pct": 5.5,
+    "rage_click_pct": 1.2,
+    "quickback_pct": 12.0
+   },
+   {
+    "path": "/book",
+    "url": "https://www.example.com/book",
+    "sessions": 260,
+    "bot_sessions": 28,
+    "scroll_depth": 64.0,
+    "active_time_s": 8060.0,
+    "dead_click_pct": 3.1,
+    "rage_click_pct": 0.8,
+    "quickback_pct": 7.9
+   },
+   {
+    "path": "/pricing",
+    "url": "https://www.example.com/pricing",
+    "sessions": 95,
+    "bot_sessions": 10,
+    "scroll_depth": 58.0,
+    "active_time_s": 2945.0,
+    "dead_click_pct": 6.0,
+    "rage_click_pct": 1.9,
+    "quickback_pct": 19.3
+   },
+   {
+    "path": "/blog/what-to-expect",
+    "url": "https://www.example.com/blog/what-to-expect",
+    "sessions": 70,
+    "bot_sessions": 7,
+    "scroll_depth": 72.0,
+    "active_time_s": 2170.0,
+    "dead_click_pct": 1.0,
+    "rage_click_pct": 0.0,
+    "quickback_pct": 9.0
+   },
+   {
+    "path": "/thank-you",
+    "url": "https://www.example.com/thank-you",
+    "sessions": 12,
+    "bot_sessions": 1,
+    "scroll_depth": 40.0,
+    "active_time_s": 372.0,
+    "dead_click_pct": 30.0,
+    "rage_click_pct": 9.0,
+    "quickback_pct": 40.0
+   }
+  ],
+  "totals": {
+   "sessions": 1227
+  }
+ },
+ "ghl": {
+  "totals": {
+   "contacts": 174,
+   "opportunities": 174,
+   "appointments_in_window": 41
+  },
+  "by_stage": {
+   "Sales pipeline / Contacted": 81,
+   "Sales pipeline / New lead": 31,
+   "Sales pipeline / Lost": 30,
+   "Sales pipeline / Showed": 14,
+   "Sales pipeline / Won": 9,
+   "Sales pipeline / Call booked": 5,
+   "Sales pipeline / No show": 4
+  },
+  "appointments_by_status": {
+   "showed": 29,
+   "noshow": 6,
+   "confirmed": 6
+  },
+  "by_source": {
+   "form": 111,
+   "facebook lead form": 63
+  },
+  "by_tag": {
+   "newsletter": 27,
+   "meta lead": 24
+  },
+  "warnings": []
+ }
+}

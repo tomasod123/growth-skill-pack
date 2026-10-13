@@ -1,0 +1,79 @@
+{
+ "campaigns": [
+  {
+   "campaign": {
+    "resourceName": "customers/0/campaigns/g1",
+    "id": "g1",
+    "name": "Search - treatment terms",
+    "status": "ENABLED",
+    "advertisingChannelType": "SEARCH"
+   },
+   "metrics": {
+    "costMicros": "1400000000",
+    "clicks": "610",
+    "impressions": "9800",
+    "conversions": 41.0,
+    "searchImpressionShare": 0.56,
+    "searchBudgetLostImpressionShare": 0.32,
+    "searchRankLostImpressionShare": 0.12
+   }
+  },
+  {
+   "campaign": {
+    "resourceName": "customers/0/campaigns/g2",
+    "id": "g2",
+    "name": "Search - competitor terms",
+    "status": "ENABLED",
+    "advertisingChannelType": "SEARCH"
+   },
+   "metrics": {
+    "costMicros": "700000000",
+    "clicks": "260",
+    "impressions": "8600",
+    "conversions": 6.0,
+    "searchImpressionShare": 0.4,
+    "searchBudgetLostImpressionShare": 0.05,
+    "searchRankLostImpressionShare": 0.55
+   }
+  },
+  {
+   "campaign": {
+    "resourceName": "customers/0/campaigns/g3",
+    "id": "g3",
+    "name": "Performance Max - all",
+    "status": "ENABLED",
+    "advertisingChannelType": "PERFORMANCE_MAX"
+   },
+   "metrics": {
+    "costMicros": "300000000",
+    "clicks": "410",
+    "impressions": "52000",
+    "conversions": 5.0
+   }
+  }
+ ],
+ "changes": [
+  {
+   "changeEvent": {
+    "changeDateTime": "2026-10-09 16:42:10.5",
+    "changeResourceType": "CAMPAIGN_BUDGET",
+    "resourceChangeOperation": "UPDATE",
+    "changedFields": "amountMicros"
+   },
+   "campaign": {
+    "name": "Search - treatment terms"
+   }
+  },
+  {
+   "changeEvent": {
+    "changeDateTime": "2026-10-02 10:05:51.2",
+    "changeResourceType": "AD",
+    "resourceChangeOperation": "CREATE",
+    "changedFields": "finalUrls"
+   },
+   "campaign": {
+    "name": "Search - competitor terms"
+   }
+  }
+ ]
+}

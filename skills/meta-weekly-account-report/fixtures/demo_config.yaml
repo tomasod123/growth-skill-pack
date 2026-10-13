@@ -1,0 +1,14 @@
+# Config used by --demo. Mirrors config.example.yaml.
+graph_version: v26.0
+accounts:
+  - id: act_DEMO_UK
+    name: Demo Clinic UK
+    currency: GBP
+    target_cpl: 40
+  - id: act_DEMO_US
+    name: Demo Clinic US
+    currency: USD
+    target_cpl: 60
+defaults:
+  min_leads_for_best: 3
+  fatigue_frequency: 4.0

@@ -1,0 +1,41 @@
+{
+  "_readme": "Your targets. Copy to analyst.json and fill every null from your own unit economics and your last 90 days of account history. The analyst grades against these and says 'no target set' where one is missing. Keys starting with _ are ignored.",
+  "business_type": "b2b",
+  "currency": "USD",
+
+  "_money": "Money layer: is spend turning into customers and cash?",
+  "target_cac": null,
+  "min_front_end_cash_roas": null,
+  "min_ltv_to_cac": null,
+  "avg_first_payment": null,
+  "avg_ltv_gross_profit": null,
+
+  "_pipeline": "Pipeline layer: at which step do people leak out?",
+  "target_cpl": null,
+  "target_cost_per_qualified_lead": null,
+  "target_cost_per_booking": null,
+  "target_lead_to_booking_pct": null,
+  "target_show_pct": null,
+  "target_close_pct": null,
+  "target_speed_to_lead_min": null,
+
+  "_diagnostics": "Diagnostics: what is causing a pipeline number to be off?",
+  "min_link_ctr_pct": null,
+  "max_cpm": null,
+  "min_hook_rate_pct": null,
+  "min_hold_rate_pct": null,
+  "max_frequency": null,
+
+  "_decision_rules": "How patient and how aggressive you are.",
+  "judge_after_spend_multiple_of_target": null,
+  "judge_after_min_days": null,
+  "kill_zero_result_spend_multiple": null,
+  "budget_step_pct": null,
+  "budget_step_every_days": null,
+  "min_distinct_concepts_live": null,
+
+  "_crm": "How your CRM marks things (live data mode).",
+  "qualified_tag": "qualified",
+  "unqualified_tag": "unqualified",
+  "exclude_contact_names": ["test"]
+}

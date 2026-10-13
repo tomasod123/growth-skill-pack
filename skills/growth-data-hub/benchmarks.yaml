@@ -1,0 +1,50 @@
+# Benchmark ranges the constraint finder holds each step against. Edit to your business.
+# A step is flagged when it falls under "low" (rates) or over "max" (costs, Clarity problems).
+# These defaults suit lead-gen for appointment-based services (clinics, B2B demos). Tune them after 2-3 reports.
+
+funnel:
+  default:
+    click_to_session: {low: 0.70, high: 0.95}   # below 70%: tracking loss, slow page, or redirects
+    session_to_lead:  {low: 0.04, high: 0.12}   # landing page conversion
+    lead_to_booked:   {low: 0.30, high: 0.50}   # booking rate
+    show_rate:        {low: 0.65, high: 0.85}   # of calls that have happened
+    showed_to_won:    {low: 0.20, high: 0.40}   # close rate
+  meta:
+    ctr: {low: 0.008, high: 0.02}               # link CTR
+    session_to_lead: {low: 0.05, high: 0.15}    # includes instant forms if you send them to the CRM
+  google_ads:
+    ctr: {low: 0.03, high: 0.08}                # Search campaigns only
+    session_to_lead: {low: 0.05, high: 0.12}
+  other:                                        # organic, direct, referral: blog readers convert less, so a lower floor
+    session_to_lead: {low: 0.008, high: 0.03}
+
+# Money targets in your currency. Set these from your economics: max CPL = what you can pay for a lead and still profit.
+costs:
+  cpl: {max: 60}
+  cost_per_booked: {max: 200}
+
+# Google Ads search impression share (fractions). Lost-to-budget only flags campaigns that convert under the CPL target.
+search:
+  lost_is_budget: {max: 0.15}
+  lost_is_rank: {max: 0.35}
+
+# Ad platform leads vs leads that reached the CRM. Under this share = check the integration (or merges).
+lead_match:
+  min_crm_share: 0.80
+
+# Clarity page signals. *_pct = % of sessions on the page with at least one such event. scroll_depth = average %.
+clarity:
+  dead_click_pct: {max: 8}
+  rage_click_pct: {max: 3}
+  quickback_pct:  {max: 15}
+  scroll_depth:   {min: 40}
+
+# Don't judge a step on too little data: the step's starting count must reach this.
+minimums:
+  impressions: 2000
+  clicks: 100
+  sessions: 100
+  leads: 10
+  booked: 8
+  showed: 5
+  clarity_sessions: 30

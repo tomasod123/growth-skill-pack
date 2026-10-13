@@ -1,0 +1,332 @@
+{
+  "_note": "Example config with placeholder values. Copy it, rename it after the business, and replace every value. Read the real offer terms from the client's T&Cs; never guess them.",
+  "BUSINESS_NAME": "Example Clinic",
+  "TEAM": "the front desk team",
+  "CALLER_ROLE": "the front desk",
+  "SPECIALIST": "clinician",
+  "LEAD_EXPERT": "Dr A. Example, lead clinician",
+  "BOOKED_CALL": "consultation",
+  "OFFER_NAME": "free consultation and written estimate",
+  "OFFER_AMOUNT": "free",
+  "MINIMUM_SPEND": "$25 refundable deposit",
+  "OFFER_ONE_LINER": "It's a free consultation with one of our clinicians, and you leave with a written treatment estimate that we honour for 30 days. We take a $25 deposit to hold the slot, and you get it back when you attend, or if you cancel with 24 hours' notice.",
+  "LOCATION": "Example City",
+  "CREDENTIALS": "every treatment is done by a registered clinician, with a full face-to-face assessment and a written plan first",
+  "PRICE_GUIDE": "it depends on the plan, and your written estimate sets out every cost before you decide anything",
+  "OFFER_EXPIRY": "the end of next month",
+  "CALENDAR_URL": "{{custom_values.booking_link}}",
+  "COMPLIANCE_NOTES": "Do not promise results or name prescription-only medicine brands on the phone. Suitability is decided by the clinician at the consultation, never on the call. Describe the deposit exactly as the written terms do.",
+  "VERSION": "v1.0",
+  "DATE": "1 January 2026",
+  "SHEET_TITLE": "Front desk cheat sheet",
+  "SHEET_HEADLINE": "Booking the {{OFFER_NAME}} calls",
+  "SHEET_INTRO": "Reach the lead fast, make them feel looked after, and book them in. Friendly and clear, never pushy. Log every call in the CRM.",
+  "PLAYBOOK_TITLE": "Front desk booking playbook",
+  "PLAYBOOK_INTRO": "A phone framework, follow-up texts, an objection bank (put the ones your leads raise most at the top once you have mined your calls), and training drills, built for {{TEAM}}.",
+  "FOOTER_CREDIT": "Booking playbook",
+  "SPEED_TARGET": "5 min",
+  "SPEED_LINE": "Call soon after an enquiry, then text and try again if there is no answer. Always call through the CRM so the call is logged and recorded.",
+  "SPEED_EVIDENCE": "Background: the Lead Response Management Study (MIT and InsideSales.com, Dr James Oldroyd) found leads called within 5 minutes were far more likely to be reached and qualified than leads called after 30 minutes, and Harvard Business Review's \"The Short Life of Online Sales Leads\" (2011) found firms responding within an hour were nearly 7 times as likely to qualify a lead as those waiting longer.",
+  "BRAND_PRIMARY": "#2F5547",
+  "BRAND_INK": "#14191A",
+  "BRAND_MUTED": "#5A6C62",
+  "BRAND_ACCENT": "#7FA88E",
+  "BRAND_PAPER": "#F6F4EF",
+  "BRAND_RULE": "#DCDFD6",
+  "BRAND_FONT": "Inter",
+  "LOGO_FILE": "assets/logo.png",
+  "CHEATSHEET_TOP_N": 11,
+  "PRINCIPLES": [
+    "This is for {{TEAM}}, the people who call leads and book them in. The {{SPECIALIST}} handles the clinical side; your job is to reach the lead quickly, make them feel looked after, and get them booked.",
+    "Call the offer by ONE name every time: the {{OFFER_NAME}}. Keep it identical to the ad and the text the lead received.",
+    "Mention the {{MINIMUM_SPEND}} early and explain it in one line, so it never arrives as a surprise.",
+    "Close with a choice of two times, never a yes/no question. 'I can do Tuesday at 10 or Thursday at 3, which suits?' beats 'shall I book you in?'.",
+    "If they cannot commit now, agree a specific callback time rather than an open 'let me know'.",
+    "Speed matters. Call soon after the enquiry, try more than once, and log every call in the CRM."
+  ],
+  "KEEP_BY_THE_PHONE": [
+    {
+      "word": "Introduce",
+      "what": "Your name, the business and why you're calling, in the first sentence."
+    },
+    {
+      "word": "Listen",
+      "what": "Open questions, notes, then a one-line summary back before you suggest anything."
+    },
+    {
+      "word": "Next step",
+      "what": "End every call with a booked time or a specific callback time."
+    }
+  ],
+  "KEEP_TIPS": [
+    "Before answering a concern, ask one short question to understand what is behind it.",
+    "Use plain words, and confirm the day, time and what is included before you hang up."
+  ],
+  "OPENERS": [
+    {
+      "label": "Replied to a text offer",
+      "lines": [
+        "Hi [first name], it's [your name] from {{BUSINESS_NAME}}, how are you? I'm calling about the {{OFFER_NAME}} you replied to, to find you a time.",
+        "{{OFFER_ONE_LINER}} I have [day/time] or [day/time], which would you prefer?"
+      ],
+      "note": "Say the reason for the call and the offer in one line, including the deposit, before they have to ask."
+    },
+    {
+      "label": "Already booked in?",
+      "lines": [
+        "Perfect, you're all set. I'll make sure the {{SPECIALIST}} has your notes, and you'll get the written estimate at that appointment."
+      ],
+      "note": "Already booked: confirm the appointment and that the estimate comes with it. Don't re-book them."
+    },
+    {
+      "label": "Existing client?",
+      "lines": [
+        "Lovely, welcome back. The {{OFFER_NAME}} is open to you too, so let me pull up your file and find you a time for a review."
+      ],
+      "note": "Existing client: pull up the file and book a review with the {{SPECIALIST}}."
+    },
+    {
+      "label": "New ad enquiry",
+      "lines": [
+        "Hi [first name], it's [your name] from {{BUSINESS_NAME}}, you left your details on our [treatment] page, so I'm calling to get your consultation booked. Have I caught you at an okay time?",
+        "Great. {{OFFER_ONE_LINER}} I have [day/time] or [day/time], which suits you?"
+      ],
+      "note": "New ad lead: call soon after the enquiry; they may not remember the ad. Name yourself and the business clearly. If no answer, text and try again later."
+    }
+  ],
+  "CALL_STEPS": [
+    {
+      "title": "Introduce yourself and the offer in one line",
+      "goal": "Make it instantly clear who is calling and why, and explain the offer before they have to ask.",
+      "say": [
+        "Hi [first name], it's [your name] from {{BUSINESS_NAME}}. I'm calling to book your {{OFFER_NAME}}.",
+        "{{OFFER_ONE_LINER}}"
+      ],
+      "cue": "Say the business name clearly. It reassures anyone unsure whether the message was genuine.",
+      "compliance": "{{COMPLIANCE_NOTES}}"
+    },
+    {
+      "title": "An open question",
+      "goal": "Find their main interest so the {{SPECIALIST}} has context.",
+      "say": [
+        "So the {{SPECIALIST}} has some context, what made you get in touch? What would you like to find out at the consultation?"
+      ],
+      "cue": "Note the area they mention first and anything they've had before.",
+      "compliance": "Ask what they'd like to find out rather than what they'd like to fix."
+    },
+    {
+      "title": "A little history",
+      "goal": "Just enough so the {{SPECIALIST}} is prepared.",
+      "say": [
+        "Have you had anything similar done before, with us or elsewhere?"
+      ],
+      "cue": "Gather context; leave clinical advice to the {{SPECIALIST}}.",
+      "compliance": "Don't promise results. Only the {{SPECIALIST}} discusses outcomes, in the {{BOOKED_CALL}}."
+    },
+    {
+      "title": "Why us, in one line",
+      "goal": "Reassure them without comparing other businesses by name.",
+      "say": [
+        "Something people like about coming to us: {{CREDENTIALS}}. You'll also leave with everything in writing, so there are no surprises."
+      ],
+      "cue": "Say it like you mean it, not like a script.",
+      "compliance": "Credentials are credibility points, not outcome claims."
+    },
+    {
+      "title": "Book it with a choice of two",
+      "goal": "Put the {{BOOKED_CALL}} in the diary with clear terms.",
+      "say": [
+        "I've got [day/time 1] or [day/time 2], which suits you better?",
+        "Just so it's clear, the {{BOOKED_CALL}} is free, the {{MINIMUM_SPEND}} holds your slot, and the written estimate is valid for 30 days."
+      ],
+      "cue": "Never end a live call on \"give us a call when you're ready\". Book a time or agree a callback time.",
+      "compliance": ""
+    },
+    {
+      "title": "Confirm and prevent the no-show",
+      "goal": "Confirm the details and set up reminders so they turn up.",
+      "say": [
+        "Brilliant, you're booked with the {{SPECIALIST}} on [day] at [time]. You'll get a text and email now, and a reminder before the day. If anything comes up, let us know 24 hours ahead and your deposit comes straight back. Any questions before then?"
+      ],
+      "cue": "Confirmation, reminders and a clear cancellation rule all help people turn up.",
+      "compliance": ""
+    }
+  ],
+  "FAQS": [
+    {
+      "q": "How much will it cost?",
+      "a": "The {{BOOKED_CALL}} itself is free. For treatment, {{PRICE_GUIDE}}, and the estimate holds for 30 days."
+    },
+    {
+      "q": "Is it safe?",
+      "a": "Good question, {{CREDENTIALS}}. The {{SPECIALIST}} will talk you through anything specific at your appointment."
+    }
+  ],
+  "TEXTS": [
+    {
+      "label": "Text 1",
+      "when": "the instant the lead opts in",
+      "body": "Hi {{contact.first_name}}, it's the {{BUSINESS_NAME}} team, thanks for your enquiry. Your {{OFFER_NAME}}: a free {{BOOKED_CALL}} with a written estimate valid for 30 days, and a {{MINIMUM_SPEND}} to hold the slot. We'll call you shortly to find a time, or reply here."
+    },
+    {
+      "label": "Text 2",
+      "when": "if the call was not answered",
+      "body": "Hi {{contact.first_name}}, the {{BUSINESS_NAME}} team here, we just tried to call about your {{OFFER_NAME}}. Reply with a day and time that suits and we'll book you in."
+    },
+    {
+      "label": "Text 3",
+      "when": "next day, only if no reply",
+      "body": "Hi {{contact.first_name}}, no problem if now isn't the right time. You can pick a {{BOOKED_CALL}} time here whenever suits: {{CALENDAR_URL}}"
+    }
+  ],
+  "OBJECTIONS": [
+    {
+      "q": "What's included? / Is it really free?",
+      "freq": "Starter",
+      "bucket": "Clarity",
+      "short": "Yes, the {{BOOKED_CALL}} is free and you get a written estimate valid for 30 days. The {{MINIMUM_SPEND}} just holds the slot. Tuesday or Thursday?",
+      "handle": "Of course, let me explain. {{OFFER_ONE_LINER}} Would earlier or later in the week suit you?",
+      "note": "Explain the offer in one line, the same way every time, including the deposit."
+    },
+    {
+      "q": "Not interested (a quick no)",
+      "freq": "Starter",
+      "bucket": "Clarity",
+      "short": "No problem. Can I ask what's put you off, so we don't call you about the wrong thing?",
+      "handle": "No problem at all. Can I ask what's put you off, so we don't contact you about the wrong thing? (Listen.) If it helps, it's a free {{BOOKED_CALL}} with a written estimate, no commitment. (If still no: thanks for your time, take care.)",
+      "note": "One clarifying question, then accept the answer politely."
+    },
+    {
+      "q": "Not now / I'm busy / call me back",
+      "freq": "Starter",
+      "bucket": "Timing",
+      "short": "Of course. When's a good time for a two-minute call, later today or tomorrow morning?",
+      "handle": "Of course, I won't keep you. When would be a better time for a quick two-minute call, later today or tomorrow morning? I'll send you a text with the details meanwhile.",
+      "note": "Agree a specific callback time and put it in the CRM."
+    },
+    {
+      "q": "How long is the estimate or offer valid?",
+      "freq": "Starter",
+      "bucket": "Timing",
+      "handle": "The offer runs until {{OFFER_EXPIRY}}, and once you've had the {{BOOKED_CALL}} your written estimate holds for 30 days, so there's no rush to decide on the day.",
+      "note": "Use the real dates from the written terms only."
+    },
+    {
+      "q": "A health or life reason they can't come now",
+      "freq": "Starter",
+      "bucket": "Timing",
+      "handle": "Of course, that comes first. Would you like me to pencil something in a few weeks out? You can move it any time.",
+      "note": "Be human first. Offer a later date, never push."
+    },
+    {
+      "q": "Why do you need a deposit?",
+      "freq": "Starter",
+      "bucket": "Money",
+      "short": "It just holds the slot. You get the {{MINIMUM_SPEND}} back when you attend, or if you cancel 24 hours ahead.",
+      "handle": "Fair question. The {{MINIMUM_SPEND}} only holds your slot, because consultation times are limited. You get it back when you come in, or if you cancel with 24 hours' notice.",
+      "note": "State the deposit and how it is refunded exactly as the written terms say."
+    },
+    {
+      "q": "How much is the treatment?",
+      "freq": "Starter",
+      "bucket": "Money",
+      "short": "It depends on what suits you; the free {{BOOKED_CALL}} gives you a written estimate with every cost.",
+      "handle": "It depends on what suits you, which is what the free {{BOOKED_CALL}} is for. As a rough guide, {{PRICE_GUIDE}}. Shall we find you a time?",
+      "note": "Give a rough guide if the business allows it and route exact numbers to the written estimate."
+    },
+    {
+      "q": "I can't afford it right now",
+      "freq": "Starter",
+      "bucket": "Money",
+      "handle": "I understand, no pressure. The {{BOOKED_CALL}} is free and the estimate lasts 30 days, so you'd know exactly where you stand before deciding anything.",
+      "note": "A real money worry, not a price question. Be kind and leave the door open."
+    },
+    {
+      "q": "Send me info / I'll check the website",
+      "freq": "Starter",
+      "bucket": "Trust",
+      "short": "Of course, I'll text it now. Would you like me to pencil in a time as well, which you can move?",
+      "handle": "Of course, I'll text that over now. A page can't tell you what would suit you; the {{BOOKED_CALL}} can. Would you like me to pencil in a time too, which you can change after you've had a look?",
+      "note": "Always send the info. Then offer a time."
+    },
+    {
+      "q": "I'll have a think",
+      "freq": "Starter",
+      "bucket": "Trust",
+      "short": "Of course. What would help you decide? I'm happy to answer anything now.",
+      "handle": "Of course, no rush. Is there anything I can answer now that would help you decide? (Listen.) The {{BOOKED_CALL}} is free and the estimate is in writing, so it's a low-risk way to get the full picture.",
+      "note": "Ask what would help, answer it, then offer a time or a callback."
+    },
+    {
+      "q": "Which company is this? / I didn't enquire",
+      "freq": "Starter",
+      "bucket": "Trust",
+      "variants": [
+        "why are you calling?",
+        "wrong number"
+      ],
+      "short": "This is [your name] from {{BUSINESS_NAME}}; you left your details on our page. Happy for you to call our main number to check. If it wasn't you, I'll remove them.",
+      "handle": "Good question, this is [your name] from {{BUSINESS_NAME}}. You left your details about the {{OFFER_NAME}}. You're welcome to call our main number back to check it's us, and if it wasn't you, I'll remove your details.",
+      "note": "Name yourself and the business clearly and offer the callback."
+    },
+    {
+      "q": "I've tried things before and nothing worked",
+      "freq": "Starter",
+      "bucket": "Trust",
+      "handle": "I'm sorry to hear that. What did you try? (Listen.) That's why the {{BOOKED_CALL}} starts with a proper assessment, so the {{SPECIALIST}} can give you an honest view before you commit to anything.",
+      "note": "Don't oversell or criticise the other provider."
+    },
+    {
+      "q": "I'm already a client",
+      "freq": "Starter",
+      "bucket": "Fit",
+      "short": "Welcome back. The offer is open to you too; let me find you a review time.",
+      "handle": "Lovely, welcome back. The {{OFFER_NAME}} is open to existing clients too. Let me pull up your file and find a time with the {{SPECIALIST}}.",
+      "note": "Check the written terms on who the offer covers before you say yes."
+    },
+    {
+      "q": "Do you do [treatment]?",
+      "freq": "Starter",
+      "bucket": "Fit",
+      "short": "Yes we do. The free {{BOOKED_CALL}} is the best way to see what suits. Morning or afternoon?",
+      "handle": "Yes, we do [treatment]. The best way to see what would work for you is a free {{BOOKED_CALL}} with our {{SPECIALIST}}. Morning or afternoon?",
+      "note": "If it's something the business doesn't offer, say so and suggest the nearest thing it does."
+    }
+  ],
+  "DRILLS": [
+    {
+      "title": "Fast first call, and trying again",
+      "situation": "A lead fills in the form at 2:32pm. By 3pm nobody has called.",
+      "target": "Call as soon as you see it. No answer: send Text 2 and try again later that day and the next.",
+      "principle": "Call soon and try more than once.",
+      "aim": "Hit the response-time target set in the config on most leads."
+    },
+    {
+      "title": "Explaining the offer in one line",
+      "situation": "The lead picks up: \"Sorry, what is this? What's the deposit for?\"",
+      "target": "One clear line, then a choice of two times: \"{{OFFER_ONE_LINER}} I have [day] or [day], which would you prefer?\"",
+      "principle": "Same offer name every time; deposit explained up front.",
+      "aim": "The lead understands the offer in one sentence and you move to booking."
+    },
+    {
+      "title": "Turning 'call me back' into a callback time",
+      "situation": "\"I'm busy now, can you call me another time?\"",
+      "target": "\"Of course. Later today or tomorrow morning?\" Then log the callback in the CRM.",
+      "principle": "Every 'call me back' ends with a specific time.",
+      "aim": "A booked slot or a logged callback time on every live call."
+    }
+  ],
+  "SPEED_HABITS": [
+    "Turn on CRM mobile notifications so you hear about a new enquiry the second it lands.",
+    "Call, call again, then text. More than one attempt is the difference.",
+    "Make every call through the CRM, not a personal mobile, so it is logged, recorded and coachable.",
+    "Once a week, look at how fast leads were called and fix anything slow."
+  ],
+  "OFFER_TERMS": [
+    "<b>Free</b> {{BOOKED_CALL}}",
+    "Written estimate valid <b>30 days</b>",
+    "<b>{{MINIMUM_SPEND}}</b> to hold the slot",
+    "Deposit back on attendance or <b>24 h</b> notice",
+    "Offer ends {{OFFER_EXPIRY}}"
+  ]
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{PLAYBOOK_TITLE}} · {{BUSINESS_NAME}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family={{BRAND_FONT}}:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:{{BRAND_PRIMARY}}; --ink:{{BRAND_INK}}; --muted:{{BRAND_MUTED}};
+    --accent:{{BRAND_ACCENT}}; --paper:{{BRAND_PAPER}}; --rule:{{BRAND_RULE}};
+    --surface:#FFFFFF; --danger:#B42318; --success:#1E7F4F; --warning:#B26A00;
+    --font:'{{BRAND_FONT}}',system-ui,-apple-system,sans-serif; --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+    --r:12px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased;line-height:1.55}
+  .wrap{max-width:900px;margin:0 auto;padding:32px 24px 80px}
+  .cover{background:var(--ink);color:#fff;padding:44px 40px;border-radius:20px;margin-bottom:36px}
+  .cover img{height:52px;max-width:220px;object-fit:contain;background:#fff;border-radius:8px;padding:6px 10px;margin-bottom:20px}
+  .cover .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+  .cover h1{font-size:40px;line-height:1.08;margin:0 0 12px;letter-spacing:-.02em}
+  .cover p{color:rgba(255,255,255,.8);max-width:620px;margin:0}
+  .cover .meta{margin-top:24px;display:flex;gap:28px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+  .orient{background:var(--surface);border:1px solid var(--rule);padding:24px 28px;border-radius:var(--r);margin-bottom:28px}
+  .orient h2{font-size:21px;margin:0 0 8px}.orient ol{margin:10px 0 0;padding-left:22px}.orient li{margin-bottom:8px}
+  .sticky{background:var(--primary);color:#fff;border-radius:var(--r);padding:26px 28px;margin-bottom:44px}
+  .sticky h2{font-size:21px;margin:0 0 12px}.sticky .ccc{display:flex;gap:12px;flex-wrap:wrap}
+  .sticky .c{flex:1 1 200px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:14px 16px}
+  .sticky .w{font-weight:700;font-size:17px}.sticky .d{font-size:13px;opacity:.85}.sticky p{font-size:14px;opacity:.9}
+  section{margin-bottom:52px}
+  .h-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--primary);margin-bottom:6px}
+  h2.h-section{font-size:28px;margin:0 0 8px;letter-spacing:-.01em}
+  p.lead{color:var(--muted);font-size:15px;margin:0 0 22px;max-width:660px}
+  .step,.obj-card,.drill,.sms-card,.faq{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);padding:22px 26px;margin-bottom:14px}
+  .step-no,.drill-no{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--primary);margin-bottom:8px}
+  .goal{font-size:13.5px;color:var(--muted);margin:0 0 14px;padding-bottom:12px;border-bottom:1px dashed var(--rule)}
+  .quote,.rebuttal{font-size:14.5px;line-height:1.7;background:var(--paper);padding:14px 18px;border-left:3px solid var(--primary);border-radius:4px;margin-bottom:10px}
+  .note,.rebuttal-note{font-size:13px;color:var(--muted);margin:10px 0 0}
+  .compliance{font-size:12.5px;color:var(--danger);margin-top:10px;padding:9px 13px;background:rgba(180,35,24,.05);border-left:3px solid var(--danger);border-radius:4px}
+  .obj-head{display:flex;gap:10px;align-items:center}
+  .rank{font-family:var(--mono);font-weight:700;color:var(--primary)}
+  .freq{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:var(--paper);border:1px solid var(--rule);padding:2px 9px;border-radius:999px}
+  .bucket-tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:auto}
+  .obj-card h3{font-size:17px;margin:8px 0 6px}.says{font-size:13px;color:var(--muted);font-style:italic;margin:0 0 10px}
+  .sms-meta{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin-bottom:8px;display:flex;gap:12px}
+  .sms-meta .pill{background:var(--paper);padding:2px 10px;border-radius:999px}
+  .sms-body{font-size:14.5px;white-space:pre-wrap}
+  .fq{font-weight:600;margin:0 0 6px}.fa{margin:0;color:var(--ink)}
+  .lead-says{font-size:14px;background:var(--paper);padding:11px 15px;border-left:3px solid var(--warning);border-radius:4px;margin-bottom:10px}
+  .principle{font-family:var(--mono);font-size:12px;color:var(--primary);margin:8px 0 0}.success{font-size:13px;color:var(--success);margin:4px 0 0}
+  ul.habits li{margin-bottom:8px}
+  .cite{font-size:12.5px;color:var(--muted)}
+  footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--rule);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  @media print{.cover,.sticky{-webkit-print-color-adjust:exact;print-color-adjust:exact}.step,.obj-card,.drill{break-inside:avoid}}
+</style>
+</head>
+<body><div class="wrap">
+
+<div class="cover">
+  <img src="{{LOGO_FILE}}" alt="{{BUSINESS_NAME}}" onerror="this.style.display='none'">
+  <div class="eyebrow">{{PLAYBOOK_TITLE}} · {{VERSION}}</div>
+  <h1>{{BUSINESS_NAME}}<br>{{PLAYBOOK_TITLE}}</h1>
+  <p>{{PLAYBOOK_INTRO}}</p>
+  <div class="meta"><span>{{BUSINESS_NAME}} · {{LOCATION}}</span><span>{{LEAD_EXPERT}}</span><span>Updated {{DATE}}</span></div>
+</div>
+
+<div class="orient">
+  <h2>How to use this</h2>
+  <ol>{{PRINCIPLES_LIST}}</ol>
+</div>
+
+<div class="sticky">
+  <h2>Keep this by the phone</h2>
+  <div class="ccc">{{KEEP_BY_THE_PHONE}}</div>
+  <p>{{KEEP_TIPS}}</p>
+</div>
+
+<section>
+  <div class="h-eyebrow">Section A</div>
+  <h2 class="h-section">Openers</h2>
+  <p class="lead">Pick the opener that matches how the lead arrived. Say the offer the same way every time.</p>
+  {{OPENER_CARDS}}
+</section>
+
+<section>
+  <div class="h-eyebrow">Section B</div>
+  <h2 class="h-section">The booking call, step by step</h2>
+  <p class="lead">The goal of every call: reach them fast, understand what they want, and book the {{BOOKED_CALL}}.</p>
+  {{CALL_STEPS}}
+  <h3>Common questions</h3>
+  {{FAQ_LIST}}
+</section>
+
+<section>
+  <div class="h-eyebrow">Section C</div>
+  <h2 class="h-section">Follow-up texts</h2>
+  <p class="lead">Automate these in your CRM. When someone replies, call them straight away.</p>
+  {{TEXT_CARDS}}
+</section>
+
+<section>
+  <div class="h-eyebrow">Section D</div>
+  <h2 class="h-section">Objection bank, most common first</h2>
+  <p class="lead">Once you have mined your own calls, put the most common first and drill those first.</p>
+  {{OBJECTION_CARDS}}
+</section>
+
+<section>
+  <div class="h-eyebrow">Section E</div>
+  <h2 class="h-section">Training drills</h2>
+  {{DRILL_CARDS}}
+</section>
+
+<section>
+  <div class="h-eyebrow">Section F</div>
+  <h2 class="h-section">Speed to lead</h2>
+  <p class="lead">{{SPEED_LINE}}</p>
+  <div class="step">
+    <div class="step-no">The target · {{SPEED_TARGET}}</div>
+    <p class="cite">{{SPEED_EVIDENCE}}</p>
+  </div>
+  <div class="step">
+    <div class="step-no">Habits that make it easy</div>
+    <ul class="habits">{{SPEED_HABITS}}</ul>
+  </div>
+</section>
+
+<footer>
+  <div>Prepared for {{BUSINESS_NAME}} · {{VERSION}}</div>
+  <div>{{FOOTER_CREDIT}}</div>
+</footer>
+</div></body></html>

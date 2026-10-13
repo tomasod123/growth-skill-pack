@@ -1,0 +1,5 @@
+requests>=2.31
+PyYAML>=6.0
+google-auth>=2.20          # GA4 service account sign-in
+google-auth-oauthlib>=1.0  # only for tools/google_oauth.py (one-time Google Ads refresh token)
+pytest>=7                  # tests

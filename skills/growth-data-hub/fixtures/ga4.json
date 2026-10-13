@@ -1,0 +1,328 @@
+{
+ "report": {
+  "dimensionHeaders": [
+   {
+    "name": "sessionSourceMedium"
+   },
+   {
+    "name": "landingPage"
+   }
+  ],
+  "metricHeaders": [
+   {
+    "name": "sessions",
+    "type": "TYPE_INTEGER"
+   },
+   {
+    "name": "engagedSessions",
+    "type": "TYPE_INTEGER"
+   },
+   {
+    "name": "keyEvents",
+    "type": "TYPE_FLOAT"
+   }
+  ],
+  "rows": [
+   {
+    "dimensionValues": [
+     {
+      "value": "facebook / paid"
+     },
+     {
+      "value": "/consult"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "2450"
+     },
+     {
+      "value": "1004"
+     },
+     {
+      "value": "52"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "facebook / paid"
+     },
+     {
+      "value": "/"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "520"
+     },
+     {
+      "value": "249"
+     },
+     {
+      "value": "6"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "ig / paid"
+     },
+     {
+      "value": "/consult"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "330"
+     },
+     {
+      "value": "128"
+     },
+     {
+      "value": "7"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "google / cpc"
+     },
+     {
+      "value": "/book"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "820"
+     },
+     {
+      "value": "582"
+     },
+     {
+      "value": "33"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "google / cpc"
+     },
+     {
+      "value": "/"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "190"
+     },
+     {
+      "value": "114"
+     },
+     {
+      "value": "4"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "google / cpc"
+     },
+     {
+      "value": "/pricing"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "140"
+     },
+     {
+      "value": "92"
+     },
+     {
+      "value": "3"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "google / organic"
+     },
+     {
+      "value": "/"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "1240"
+     },
+     {
+      "value": "768"
+     },
+     {
+      "value": "9"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "google / organic"
+     },
+     {
+      "value": "/blog/what-to-expect"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "610"
+     },
+     {
+      "value": "335"
+     },
+     {
+      "value": "2"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "google / organic"
+     },
+     {
+      "value": "/pricing"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "250"
+     },
+     {
+      "value": "160"
+     },
+     {
+      "value": "4"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "(direct) / (none)"
+     },
+     {
+      "value": "/"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "700"
+     },
+     {
+      "value": "406"
+     },
+     {
+      "value": "8"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "(direct) / (none)"
+     },
+     {
+      "value": "/book"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "200"
+     },
+     {
+      "value": "144"
+     },
+     {
+      "value": "7"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "bing / organic"
+     },
+     {
+      "value": "/"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "120"
+     },
+     {
+      "value": "72"
+     },
+     {
+      "value": "1"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "chatgpt.com / referral"
+     },
+     {
+      "value": "/pricing"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "45"
+     },
+     {
+      "value": "36"
+     },
+     {
+      "value": "2"
+     }
+    ]
+   },
+   {
+    "dimensionValues": [
+     {
+      "value": "instagram.com / referral"
+     },
+     {
+      "value": "/"
+     }
+    ],
+    "metricValues": [
+     {
+      "value": "160"
+     },
+     {
+      "value": "80"
+     },
+     {
+      "value": "1"
+     }
+    ]
+   }
+  ],
+  "rowCount": 14,
+  "metadata": {
+   "currencyCode": "USD",
+   "timeZone": "America/New_York"
+  },
+  "kind": "analyticsData#runReport"
+ }
+}

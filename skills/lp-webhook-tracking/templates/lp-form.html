@@ -1,0 +1,72 @@
+<!--
+  Shared landing-page form. Same code on every page; change only SERVICE_SLUG and SERVICE_LABEL.
+  Posts JSON to ONE GoHighLevel inbound webhook (Automation > Workflows > Inbound Webhook trigger > copy URL).
+  Redirects to the thank-you page only when the webhook answers OK, so a redirect proves delivery.
+  If you paste this into a GHL custom-code block: keep the <style> above the markup, and never type a
+  literal double curly brace in the JS (GHL may treat it as a merge field).
+-->
+<style>
+  .lpf{max-width:420px;margin:0 auto;padding:20px;border-radius:12px;background:#fff;box-shadow:0 4px 24px rgba(0,0,0,.08);font:16px/1.4 system-ui,sans-serif}
+  .lpf label{display:block;font-weight:600;margin:12px 0 4px}
+  .lpf input,.lpf textarea{width:100%;box-sizing:border-box;padding:12px;border:1px solid #c9ccd1;border-radius:8px;font:inherit}
+  .lpf .consent{display:flex;gap:8px;align-items:flex-start;font-weight:400;font-size:14px}
+  .lpf .consent input{width:auto;margin-top:3px}
+  .lpf button{width:100%;margin-top:16px;padding:14px;border:0;border-radius:8px;background:var(--brand,#1a3d7c);color:#fff;font:600 17px/1 system-ui,sans-serif;cursor:pointer}
+  .lpf .err{color:#b00020;font-size:14px;margin-top:8px;display:none}
+</style>
+<form class="lpf" id="lpForm" novalidate>
+  <label for="fullName">Full name</label>
+  <input id="fullName" name="fullName" autocomplete="name" required>
+  <label for="email">Email</label>
+  <input id="email" name="email" type="email" autocomplete="email" required>
+  <label for="phone">Mobile</label>
+  <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+  <label for="message">Anything we should know? (optional)</label>
+  <textarea id="message" name="message" rows="3"></textarea>
+  <label class="consent"><input id="consent" type="checkbox" required> I agree to be contacted about my enquiry by phone, text and email.</label>
+  <button type="submit" id="lpSubmit">Request my consultation</button>
+  <div class="err" id="lpErr">Something went wrong. Please try again or call us.</div>
+</form>
+<script>
+(function () {
+  var WEBHOOK_URL   = 'https://services.leadconnectorhq.com/hooks/LOCATION_ID_HERE/webhook-trigger/WEBHOOK_ID_HERE';
+  var THANK_YOU     = '/thank-you/';
+  var SERVICE_SLUG  = 'example-service';          // becomes the tag lp-example-service
+  var SERVICE_LABEL = 'Example Service (City)';   // readable, goes to the Landing Page custom field
+
+  var KEYS = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid','wbraid',
+              'gbraid','campaign_id','adgroup_id','matchtype','device','network','loc'];
+  var q = new URLSearchParams(location.search), store = {};
+  try { store = JSON.parse(sessionStorage.getItem('lp_attr') || '{}'); } catch (e) {}
+  KEYS.forEach(function (k) { if (q.get(k)) store[k] = q.get(k); });   // first touch in this session wins unless new values arrive
+  try { sessionStorage.setItem('lp_attr', JSON.stringify(store)); } catch (e) {}
+
+  var f = document.getElementById('lpForm'), btn = document.getElementById('lpSubmit'), err = document.getElementById('lpErr');
+  f.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (!f.reportValidity()) return;
+    var full = document.getElementById('fullName').value.trim().replace(/\s+/g, ' ');
+    var parts = full.split(' ');
+    var body = {
+      first_name: parts[0] || '', last_name: parts.slice(1).join(' '), full_name: full,
+      phone: document.getElementById('phone').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      message: document.getElementById('message').value.trim(),
+      service: SERVICE_SLUG, service_label: SERVICE_LABEL,
+      page_url: location.origin + location.pathname,
+      consent: document.getElementById('consent').checked ? 'yes' : 'no',
+      submitted_at: new Date().toISOString()
+    };
+    KEYS.forEach(function (k) { body[k] = store[k] || ''; });
+    btn.disabled = true; err.style.display = 'none';
+    fetch(WEBHOOK_URL, { method: 'POST', mode: 'cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        var t = new URLSearchParams({ service: SERVICE_SLUG });
+        ['utm_source','utm_medium','utm_campaign'].forEach(function (k) { if (store[k]) t.set(k, store[k]); });
+        location.href = THANK_YOU + '?' + t.toString();
+      })
+      .catch(function () { btn.disabled = false; err.style.display = 'block'; });
+  });
+})();
+</script>

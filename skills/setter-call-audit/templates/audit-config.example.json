@@ -1,0 +1,22 @@
+{
+  "_note": "Example values only. Set every target to your own standard before the first audit.",
+  "business_name": "Example Clinic",
+  "booked_call_name": "consultation",
+  "setter_name": "Setter A",
+  "setter_user_id": "USER_ID_HERE",
+  "setter_start_date": "2026-01-01",
+  "ramp_days": 30,
+  "speed_pass_minutes": 5,
+  "speed_partial_minutes": 30,
+  "booking_window_days": 5,
+  "min_calls_for_judgement": 20,
+  "qualification_criteria": [
+    "Has the problem we solve (stated in their own words)",
+    "Is the decision maker, or the decision maker will attend",
+    "Wants to act within the next 90 days",
+    "Can afford the typical price range (or financing is acceptable)",
+    "Is in our service area / meets eligibility rules"
+  ],
+  "compliance_notes": "No outcome promises. No medical advice from the setter. Do not discuss another person's records.",
+  "offer_terms": "Free 30-minute consultation; deposit rules as per your policy."
+}

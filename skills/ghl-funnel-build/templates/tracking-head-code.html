@@ -1,0 +1,70 @@
+<!--
+  Funnel-level tracking head code for GoHighLevel.
+  Paste ONCE in Funnel > Settings > Head tracking code. Never in a page block.
+
+  Assumes the Meta pixel itself is added in the funnel's Events tab (GHL loads it at
+  runtime, so it never shows in page HTML). This file only:
+    1. loads GA4,
+    2. fires one conversion event per page, chosen by the page PATH,
+    3. optionally passes email/phone/first name from the URL to the pixel
+       (manual advanced matching), because the pixel cannot see inside GHL
+       survey/calendar iframes.
+
+  Page naming contract (the events depend on it):
+    path contains "confirm"  -> Meta Schedule + GA4 book_appointment  (checked first)
+    path contains "booking"  -> Meta Lead     + GA4 generate_lead
+    anything else            -> page view only
+
+  Replace G-XXXXXXXXXX and META_PIXEL_ID_HERE. Delete any per-page GA4 or pixel
+  snippets when you switch to this, or every event counts twice.
+
+  HEALTHCARE WARNING: for US covered entities (or any page where the URL or page
+  identifies a condition or treatment), do NOT enable advanced matching and do not
+  fire pixel events on patient pages without a legal/HIPAA review. Set
+  ADVANCED_MATCHING = false below.
+-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+(function () {
+  var GA4_ID = 'G-XXXXXXXXXX';
+  var PIXEL_ID = 'META_PIXEL_ID_HERE';
+  var ADVANCED_MATCHING = true;
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = window.gtag || gtag;
+  gtag('js', new Date());
+  gtag('config', GA4_ID);
+
+  var path = location.pathname.toLowerCase();
+  var meta = null, ga = null;
+  if (path.indexOf('confirm') !== -1) { meta = 'Schedule'; ga = 'book_appointment'; }
+  else if (path.indexOf('booking') !== -1) { meta = 'Lead'; ga = 'generate_lead'; }
+  if (!meta) return;
+
+  gtag('event', ga);
+
+  function matchData() {
+    var q = new URLSearchParams(location.search), d = {};
+    var em = (q.get('email') || '').trim().toLowerCase();
+    var ph = (q.get('phone') || '').replace(/[^0-9]/g, '');
+    var fn = (q.get('first_name') || '').trim().toLowerCase();
+    if (em) d.em = em;
+    if (ph) d.ph = ph;
+    if (fn) d.fn = fn;
+    return d;
+  }
+
+  // Wait up to 10 s for the GHL-loaded pixel so the event is not lost on slow loads.
+  var tries = 0;
+  (function fire() {
+    if (typeof window.fbq === 'function') {
+      var d = ADVANCED_MATCHING ? matchData() : {};
+      if (Object.keys(d).length) window.fbq('init', PIXEL_ID, d);
+      window.fbq('track', meta);
+      return;
+    }
+    if (++tries < 40) setTimeout(fire, 250);
+  })();
+})();
+</script>

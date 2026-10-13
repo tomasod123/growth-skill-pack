@@ -1,0 +1,129 @@
+{
+ "client": {
+  "name": "Clinic A",
+  "slug": "clinic-a",
+  "logo": "./brand/clinic-a-logo.png",
+  "primary": "#2563EB",
+  "presenter": "Alex",
+  "city": "Your City",
+  "suburb": "",
+  "market": "GB",
+  "drive_folder": "https://example.com/upload-folder"
+ },
+ "agency": {
+  "name": "Your Agency",
+  "footer": ""
+ },
+ "page": {
+  "title": "Filming kit \u00b7 Skin consultations",
+  "eyebrow": "Skin consultations \u00b7 prepared for Clinic A \u00b7 2026",
+  "h1": "Five ads to film on a phone.",
+  "lead": "Each one is 20 to 45 seconds, one take, on a phone. The words are written out in full.",
+  "howto": [
+   "Pick an ad from the row at the top and read the script.",
+   "Say it in your own rhythm, one line at a time.",
+   "Name the file as shown, upload it, tick it off."
+  ],
+  "recipe": "Speak to one person \u00b7 about one concern \u00b7 with one clear offer \u00b7 send them to a quick form.",
+  "hook_rule": "The first 3 seconds decide everything. Call out the person \u00b7 name the problem \u00b7 drop the number \u00b7 make an invitation \u00b7 take the blame off them.",
+  "rules_chips": [
+   "Hold the phone vertical \u00b7 9:16",
+   "Face a window, not a light",
+   "Captions \u00b7 we add them"
+  ],
+  "before_filming": [
+   "Confirm the offer price with us before ad 1 is filmed."
+  ],
+  "research_n": 250,
+  "research_intro": "We looked at the ads running right now in your market and picked the ones that sell your kind of offer to your kind of customer.",
+  "never_survives": [
+   "Technical explainers about how the machine works.",
+   "Silent footage with music. Every strong example talks to the viewer."
+  ],
+  "open_lanes": "Payment-plan framing, ads for men, seasonal moments.",
+  "compliance_note": "Everything above sticks to what is safe to say in your market: no testimonials about outcomes, no before-and-after promises, no prescription medicines named.",
+  "next_step": "On the call we'll choose which to record first and agree the offer. We handle captions, copy, targeting and launch.",
+  "version": "v1.0"
+ },
+ "key_things": [
+  {
+   "count": "9 of 12",
+   "text": "A person speaks to camera inside the first second."
+  }
+ ],
+ "winners": [
+  {
+   "rank": "#1",
+   "days": 180,
+   "page": "Competitor One",
+   "market_pill": "",
+   "media": "AD_ID_1",
+   "country": "GB",
+   "offer": "Free skin consultation",
+   "format": "Talking head, phone, clinic room",
+   "insights": [
+    "Says her name and the clinic inside three seconds, so it reads as a person, not an ad.",
+    "The offer is said once, at the end, and never repeated."
+   ],
+   "why": "A person, one concern, one offer."
+  }
+ ],
+ "patterns": [
+  {
+   "what": "A person speaks to camera in the first second",
+   "count": "9 of 12"
+  }
+ ],
+ "groups": [
+  {
+   "id": "B",
+   "title": "Group B \u00b7 direct offer",
+   "lead": "Modelled on competitor ads that sell the same offer.",
+   "scripts": [
+    {
+     "n": 1,
+     "slug": "invite",
+     "title": "The personal invite",
+     "hook_job": "INVITATION",
+     "length": "about 30 seconds",
+     "hot": "Film this one first",
+     "source": "from the 180-day example",
+     "hook": "Hi, I'm Alex from Clinic A, and I want to invite you in for a free skin consultation.",
+     "body": [
+      "We'll look at what's going on with your skin and tell you honestly what will help.",
+      "No pressure, no obligation."
+     ],
+     "close": "Tap below and fill in the quick form, and we'll be in touch to book you in.",
+     "on_screen": [
+      "Free skin consultation",
+      "No obligation",
+      "Tap below"
+     ],
+     "offer": "[offer, to confirm]",
+     "lands_on": "Instant lead form (name, mobile, best time)",
+     "good": "Alex in the treatment room, name in the first two seconds, the offer said once, under 35 seconds.",
+     "shot": "Straight to camera, phone at eye height, facing a window.",
+     "ref_media": "AD_ID_2",
+     "ref_page": "Competitor Two",
+     "ref_days": 120,
+     "ref_len": "32s",
+     "ref_country": "GB",
+     "ref_offer": "Free consultation, no obligation",
+     "ref_format": "Talking head, phone, clinic room, burned-in captions",
+     "ref_insights": [
+      "She says her name and the clinic inside three seconds, so it reads as a person, not an ad.",
+      "One promise, one offer, one tap.",
+      "Take the pace and the framing. The words are already written for you."
+     ],
+     "callout": ""
+    }
+   ]
+  }
+ ],
+ "transcripts": [
+  {
+   "label": "#1, 180 days",
+   "text": "Hi, I'm ... from ..."
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+# One file per client. Copy to e.g. clients/demo-clinic/brand.yaml and edit.
+client_name: Demo Clinic             # shown as the page title and in the footer
+greeting_name: Dr Demo               # optional: "Hi Dr Demo." at the top of client.html
+prepared_by: Example Growth Team     # your team or company name, shown in the footer
+logo: logo.png                       # path relative to this file (inlined, best) or an https URL (loads from the web)
+colors:
+  primary: "#0F5257"                 # headings, numbers, top rule (hex only)
+  accent: "#E0A458"                  # win markers and highlights (hex only)
+font: Lato                           # font family name; falls back to the system font if not installed
+# channel_names:                     # optional: override how channels are named to the client
+#   meta: Facebook and Instagram ads
+#   google_ads: Google search ads
+#   other: Your website, search and referrals

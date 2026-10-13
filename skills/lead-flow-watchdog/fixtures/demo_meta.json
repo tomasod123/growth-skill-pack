@@ -1,0 +1,773 @@
+{
+ "_note": "Meta Graph API /insights rows (level=account, time_increment=1), keyed by ad account.",
+ "insights": {
+  "act_DEMO_NORTH": [
+   {
+    "date_start": "2026-03-03",
+    "date_stop": "2026-03-03",
+    "account_currency": "GBP",
+    "spend": "260.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "84"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "110"
+     },
+     {
+      "action_type": "lead",
+      "value": "8"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "8"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-04",
+    "date_stop": "2026-03-04",
+    "account_currency": "GBP",
+    "spend": "267.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "93"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "120"
+     },
+     {
+      "action_type": "lead",
+      "value": "9"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "9"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-05",
+    "date_stop": "2026-03-05",
+    "account_currency": "GBP",
+    "spend": "274.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "75"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "100"
+     },
+     {
+      "action_type": "lead",
+      "value": "7"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "7"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-06",
+    "date_stop": "2026-03-06",
+    "account_currency": "GBP",
+    "spend": "281.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "102"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "130"
+     },
+     {
+      "action_type": "lead",
+      "value": "10"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "10"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-07",
+    "date_stop": "2026-03-07",
+    "account_currency": "GBP",
+    "spend": "265.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "84"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "110"
+     },
+     {
+      "action_type": "lead",
+      "value": "8"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "8"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-08",
+    "date_stop": "2026-03-08",
+    "account_currency": "GBP",
+    "spend": "272.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "93"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "120"
+     },
+     {
+      "action_type": "lead",
+      "value": "9"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "9"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-09",
+    "date_stop": "2026-03-09",
+    "account_currency": "GBP",
+    "spend": "279.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "84"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "110"
+     },
+     {
+      "action_type": "lead",
+      "value": "8"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "8"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-10",
+    "date_stop": "2026-03-10",
+    "account_currency": "GBP",
+    "spend": "280.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "93"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "120"
+     },
+     {
+      "action_type": "lead",
+      "value": "9"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "9"
+     }
+    ]
+   }
+  ],
+  "act_DEMO_SOUTH": [
+   {
+    "date_start": "2026-03-03",
+    "date_stop": "2026-03-03",
+    "account_currency": "GBP",
+    "spend": "240.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "66"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "90"
+     },
+     {
+      "action_type": "lead",
+      "value": "6"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "6"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-04",
+    "date_stop": "2026-03-04",
+    "account_currency": "GBP",
+    "spend": "247.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "57"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "80"
+     },
+     {
+      "action_type": "lead",
+      "value": "5"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "5"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-05",
+    "date_stop": "2026-03-05",
+    "account_currency": "GBP",
+    "spend": "254.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "75"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "100"
+     },
+     {
+      "action_type": "lead",
+      "value": "7"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "7"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-06",
+    "date_stop": "2026-03-06",
+    "account_currency": "GBP",
+    "spend": "261.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "66"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "90"
+     },
+     {
+      "action_type": "lead",
+      "value": "6"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "6"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-07",
+    "date_stop": "2026-03-07",
+    "account_currency": "GBP",
+    "spend": "245.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "66"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "90"
+     },
+     {
+      "action_type": "lead",
+      "value": "6"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "6"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-08",
+    "date_stop": "2026-03-08",
+    "account_currency": "GBP",
+    "spend": "252.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "57"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "80"
+     },
+     {
+      "action_type": "lead",
+      "value": "5"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "5"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-09",
+    "date_stop": "2026-03-09",
+    "account_currency": "GBP",
+    "spend": "259.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "75"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "100"
+     },
+     {
+      "action_type": "lead",
+      "value": "7"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "7"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-10",
+    "date_stop": "2026-03-10",
+    "account_currency": "GBP",
+    "spend": "540.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "66"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "90"
+     },
+     {
+      "action_type": "lead",
+      "value": "6"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "6"
+     }
+    ]
+   }
+  ],
+  "act_DEMO_EAST": [
+   {
+    "date_start": "2026-03-03",
+    "date_stop": "2026-03-03",
+    "account_currency": "USD",
+    "spend": "300.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "57"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "80"
+     },
+     {
+      "action_type": "lead",
+      "value": "5"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "5"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-04",
+    "date_stop": "2026-03-04",
+    "account_currency": "USD",
+    "spend": "307.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "48"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "70"
+     },
+     {
+      "action_type": "lead",
+      "value": "4"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "4"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-05",
+    "date_stop": "2026-03-05",
+    "account_currency": "USD",
+    "spend": "314.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "66"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "90"
+     },
+     {
+      "action_type": "lead",
+      "value": "6"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "6"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-06",
+    "date_stop": "2026-03-06",
+    "account_currency": "USD",
+    "spend": "321.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "57"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "80"
+     },
+     {
+      "action_type": "lead",
+      "value": "5"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "5"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-07",
+    "date_stop": "2026-03-07",
+    "account_currency": "USD",
+    "spend": "305.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "57"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "80"
+     },
+     {
+      "action_type": "lead",
+      "value": "5"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "5"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-08",
+    "date_stop": "2026-03-08",
+    "account_currency": "USD",
+    "spend": "312.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "66"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "90"
+     },
+     {
+      "action_type": "lead",
+      "value": "6"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "6"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-09",
+    "date_stop": "2026-03-09",
+    "account_currency": "USD",
+    "spend": "319.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "48"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "70"
+     },
+     {
+      "action_type": "lead",
+      "value": "4"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "4"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-10",
+    "date_stop": "2026-03-10",
+    "account_currency": "USD",
+    "spend": "330.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "75"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "100"
+     },
+     {
+      "action_type": "lead",
+      "value": "7"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "7"
+     }
+    ]
+   }
+  ],
+  "act_DEMO_WEST": [
+   {
+    "date_start": "2026-03-03",
+    "date_stop": "2026-03-03",
+    "account_currency": "USD",
+    "spend": "200.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "48"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "70"
+     },
+     {
+      "action_type": "lead",
+      "value": "4"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "4"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-04",
+    "date_stop": "2026-03-04",
+    "account_currency": "USD",
+    "spend": "207.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "39"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "60"
+     },
+     {
+      "action_type": "lead",
+      "value": "3"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "3"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-05",
+    "date_stop": "2026-03-05",
+    "account_currency": "USD",
+    "spend": "214.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "57"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "80"
+     },
+     {
+      "action_type": "lead",
+      "value": "5"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "5"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-06",
+    "date_stop": "2026-03-06",
+    "account_currency": "USD",
+    "spend": "221.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "48"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "70"
+     },
+     {
+      "action_type": "lead",
+      "value": "4"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "4"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-07",
+    "date_stop": "2026-03-07",
+    "account_currency": "USD",
+    "spend": "205.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "48"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "70"
+     },
+     {
+      "action_type": "lead",
+      "value": "4"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "4"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-08",
+    "date_stop": "2026-03-08",
+    "account_currency": "USD",
+    "spend": "212.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "48"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "70"
+     },
+     {
+      "action_type": "lead",
+      "value": "4"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "4"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-09",
+    "date_stop": "2026-03-09",
+    "account_currency": "USD",
+    "spend": "219.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "48"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "70"
+     },
+     {
+      "action_type": "lead",
+      "value": "4"
+     },
+     {
+      "action_type": "onsite_conversion.lead_grouped",
+      "value": "4"
+     }
+    ]
+   },
+   {
+    "date_start": "2026-03-10",
+    "date_stop": "2026-03-10",
+    "account_currency": "USD",
+    "spend": "180.00",
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "12"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "30"
+     }
+    ]
+   }
+  ]
+ }
+}
