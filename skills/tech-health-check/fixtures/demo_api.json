@@ -1,0 +1,470 @@
+[
+ {
+  "url": "/contacts/search",
+  "body": "\"locationId\": \"loc_demo_sync\", \"pageLimit\": 1}",
+  "status": 200,
+  "data": {
+   "contacts": [],
+   "total": 5200
+  }
+ },
+ {
+  "url": "/contacts/search",
+  "body": "\"locationId\": \"loc_demo_sync\", \"pageLimit\": 100",
+  "status": 200,
+  "data": {
+   "contacts": [
+    {
+     "dateAdded": "2026-09-29T12:47:07.000Z",
+     "source": "Facebook",
+     "tags": [
+      "meta"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "url": "/contacts/search",
+  "body": "\"locationId\": \"loc_demo_ok\", \"pageLimit\": 1}",
+  "status": 200,
+  "data": {
+   "contacts": [],
+   "total": 800
+  }
+ },
+ {
+  "url": "/contacts/search",
+  "body": "\"locationId\": \"loc_demo_ok\", \"pageLimit\": 100",
+  "status": 200,
+  "data": {
+   "contacts": [
+    {
+     "dateAdded": "2026-10-13T10:47:07.000Z",
+     "source": "facebook",
+     "tags": [
+      "meta"
+     ]
+    },
+    {
+     "dateAdded": "2026-10-13T07:47:07.000Z",
+     "source": "facebook",
+     "tags": [
+      "meta"
+     ]
+    },
+    {
+     "dateAdded": "2026-10-13T03:47:07.000Z",
+     "source": "facebook",
+     "tags": [
+      "meta"
+     ]
+    },
+    {
+     "dateAdded": "2026-10-12T22:47:07.000Z",
+     "source": "facebook",
+     "tags": [
+      "meta"
+     ]
+    },
+    {
+     "dateAdded": "2026-10-12T16:47:07.000Z",
+     "source": "facebook",
+     "tags": [
+      "meta"
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "url": "/contacts/search",
+  "body": "\"locationId\": \"loc_demo_revoked\"",
+  "status": 401
+ },
+ {
+  "url": "/act_111/insights",
+  "status": 200,
+  "data": {
+   "data": [
+    {
+     "date_start": "2026-09-29",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-09-30",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-01",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-02",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-03",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-04",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-05",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-06",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-07",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-08",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-09",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-10",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-11",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-12",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-13",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "url": "/act_111?",
+  "status": 200,
+  "data": {
+   "account_status": 9,
+   "disable_reason": 0
+  }
+ },
+ {
+  "url": "/act_222/insights",
+  "status": 200,
+  "data": {
+   "data": [
+    {
+     "date_start": "2026-09-29",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-09-30",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-01",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-02",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-03",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-04",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-05",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-06",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-07",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-08",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-09",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-10",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-11",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    },
+    {
+     "date_start": "2026-10-12",
+     "spend": "0",
+     "actions": []
+    },
+    {
+     "date_start": "2026-10-13",
+     "spend": "110.00",
+     "actions": [
+      {
+       "action_type": "lead",
+       "value": "11"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "url": "/act_222?",
+  "status": 200,
+  "data": {
+   "account_status": 1
+  }
+ },
+ {
+  "url": "/opportunities/search",
+  "status": 200,
+  "data": {
+   "meta": {
+    "total": 2485
+   }
+  }
+ },
+ {
+  "url": "book.example-clinic.com",
+  "status": 200,
+  "data": "<html>ok</html>"
+ },
+ {
+  "url": "offer.example-clinic.com",
+  "status": "ssl",
+  "data": "CERTIFICATE_VERIFY_FAILED: hostname mismatch"
+ },
+ {
+  "url": "/locations/search",
+  "status": 200,
+  "data": {
+   "locations": [
+    {
+     "id": "loc_demo_sync",
+     "name": "Example Clinic North"
+    },
+    {
+     "id": "loc_demo_ok",
+     "name": "Example Clinic South"
+    },
+    {
+     "id": "loc_new_client",
+     "name": "Brand New Client Ltd"
+    },
+    {
+     "id": "loc_internal",
+     "name": "Agency Sandbox"
+    }
+   ]
+  }
+ },
+ {
+  "url": "api.instantly.ai",
+  "status": 200,
+  "data": {
+   "items": [
+    {
+     "email": "sam@outreach-example.com",
+     "status": 1
+    },
+    {
+     "email": "alex@outreach-example.com",
+     "status": -1
+    }
+   ]
+  }
+ }
+]

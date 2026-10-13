@@ -1,0 +1,26 @@
+# tech-health-check config. Copy to config.yaml. Tokens live in ~/.claude/skills/.env, never here.
+
+routing:
+  clickup_list_id: ""            # list where fix tasks go (number after /li/ in the list URL)
+  clickup_assignee_id: ""        # ClickUp user id of the person who fixes things
+  slack_webhook_env: SLACK_WEBHOOK_URL
+
+ghl_agency:                      # optional: finds sub-accounts nobody added here (new clients without a key)
+  token_env: GHL_AGENCY_TOKEN
+  company_id: ""
+  ignore_locations: []           # internal, demo or former-client sub-accounts
+
+instantly: false                 # true = also check cold email inboxes (needs INSTANTLY_API_KEY)
+
+clients:
+  - name: Example Clinic
+    active: true                 # false for former clients, or the check flags their dead key every day
+    ghl:
+      location_id: ""            # browser URL after /location/
+      token_env: GHL_TOKEN_EXAMPLE
+    meta:
+      ad_account_id: act_0000000000
+      token_env: META_ACCESS_TOKEN
+      lead_source_match: [facebook, instagram]   # how Meta leads show in the CRM Source field
+    sites:                       # landing and booking pages the ads send people to
+      - https://book.example.com/

@@ -1,6 +1,6 @@
 # Growth skill pack for Claude Code
 
-28 Claude Code skills for a head of growth: Meta and Google ads audits, GoHighLevel builds and QC, landing pages and CRO, competitor video ad research, cold email, sales call coaching, AI search visibility, and quality control for anything you send. Each one is a working method with checklists, scripts and the traps that cost real time to find. They are written to work for a B2B healthcare software team and for an agency running clinics.
+36 Claude Code skills for a head of growth: Meta and Google ads audits, GoHighLevel builds and QC, landing pages and CRO, competitor video ad research, cold email, sales call coaching, AI search visibility, and quality control for anything you send. Each one is a working method with checklists, scripts and the traps that cost real time to find. They are written to work for a B2B healthcare software team and for an agency running clinics.
 
 Every skill has a `SETUP.md`. Start there. It tells you which accounts and keys you need, exactly where to get each one, how to test access, and the first thing to type.
 
@@ -91,9 +91,12 @@ One shared file: copy `.env.example` to `~/.claude/skills/.env`, fill in only th
 | `GOOGLE_ADS_REFRESH_TOKEN` | Refresh token (shared) | python3 ~/.claude/skills/gads-common/scripts/gads.py login --save | gads-audit, gads-common |
 | `GOOGLE_OAUTH_CLIENT_FILE` | Path to Google OAuth desktop client JSON (Sheets input only) | Google Cloud Console > APIs & Services > Credentials > Create credentials > OAuth client ID > Desktop app > Download JSON (enable Sheets API and Drive API first) | design-website |
 | `GOOGLE_TOKEN_FILE` | Path where the Google login token is saved (Sheets input only) | Any local path you choose; created on first browser login | design-website |
-| `INSTANTLY_API_KEY` | Create campaigns, add leads, pull analytics (if sending with Instantly) | app.instantly.ai > Settings > Integrations > API Keys (API v2 key) | cold-email-starter-kit |
+| `INSTANTLY_API_KEY` | Create campaigns, add leads, pull analytics (if sending with Instantly) | app.instantly.ai > Settings > Integrations > API Keys (API v2 key) | cold-email-starter-kit, tech-health-check |
 | `LP_TEST_MARKER` | Optional. String every test email contains so the workflow's Real-enquiry branch skips client alerts (default +lptest) | You choose it; use the same string in the workflow If/Else | lp-webhook-tracking |
-| `META_ACCESS_TOKEN` | Meta Marketing API token, read-only (ads_read) | Meta Business Settings > Users > System users > Generate new token, scope ads_read | meta-ads-analyst, meta-launch-audit |
+| `META_ACCESS_TOKEN` | Meta Marketing API token, read-only (ads_read) | Meta Business Settings > Users > System users > Generate new token, scope ads_read | meta-ads-analyst, meta-launch-audit, tech-health-check |
+| `CLICKUP_API_TOKEN` | ClickUp API token, to create fix tasks (optional) | ClickUp > avatar > Settings > Apps > API Token | tech-health-check |
+| `GHL_AGENCY_TOKEN` | Agency-level GoHighLevel token, locations.readonly: finds clients with no key (optional) | Agency view > Settings > Private Integrations | tech-health-check |
+| `GHL_TOKEN_<CLIENT>` | One read-only GoHighLevel token per client, named in config.yaml | Client sub-account > Settings > Private Integrations | tech-health-check |
 | `META_AD_ACCOUNT_ID` | Ad account to pull (live mode) | Ads Manager account dropdown, or Business Settings > Accounts > Ad accounts | meta-ads-analyst, meta-launch-audit |
 | `META_CAMPAIGN_ID` | Optional campaign pin | Ads Manager > Campaigns > Campaign ID column | meta-ads-analyst |
 | `META_GRAPH_VERSION` | Optional Graph API version override (default v21.0) | developers.facebook.com/docs/graph-api/changelog, pick the current version | meta-ads-analyst, meta-launch-audit |
@@ -223,6 +226,7 @@ Start with **growth-data-hub**: `--demo` shows the full report with no keys.
 - **growth-data-hub**: One command pulls Meta, Google Ads, GA4, Clarity and GoHighLevel into one funnel and tells you the 5 things to do this week. Setup about 60 min. See `skills/growth-data-hub/SETUP.md`.
 - **meta-weekly-account-report**: Week-over-week Meta ads report with the best ad, the ads to kill, fatigue and a short do-this-week list. Setup about 15 min. See `skills/meta-weekly-account-report/SETUP.md`.
 - **lead-flow-watchdog**: Daily check that Meta leads are actually arriving in GoHighLevel, with alerts on breaks, drops and CPL spikes. Setup about 20 min. See `skills/lead-flow-watchdog/SETUP.md`.
+- **tech-health-check**: Every morning, checks the tech that silently loses leads (CRM keys, new clients with no key, Meta ad account status, Meta-to-CRM sync, pipeline, pages and SSL, cold email inboxes) and turns each problem into an assigned ClickUp task with the fix. Setup about 30 min. See `skills/tech-health-check/SETUP.md`.
 - **client-performance-report**: Turns a growth-data-hub report into an internal one-pager and a warm, client-branded draft report. Setup about 10 min. See `skills/client-performance-report/SETUP.md`.
 - **analytics-tracking**: Plan, set up or audit analytics and conversion tracking: GA4 events, GTM, UTMs and key events. Setup about 5 min. See `skills/analytics-tracking/SETUP.md`.
 - **analytics-access-setup**: Step-by-step read access to GA4, Search Console, Google Ads, Clarity, Meta and GoHighLevel, with a check for each. Setup about 45 min. See `skills/analytics-access-setup/SETUP.md`.

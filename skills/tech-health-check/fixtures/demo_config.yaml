@@ -1,0 +1,26 @@
+# Demo only. Fixture data, no API calls.
+demo_env:
+  GHL_TOKEN_NORTH: demo
+  GHL_TOKEN_SOUTH: demo
+  GHL_TOKEN_EAST: demo
+  META_ACCESS_TOKEN: demo
+  GHL_AGENCY_TOKEN: demo
+  INSTANTLY_API_KEY: demo
+instantly: true
+ghl_agency:
+  token_env: GHL_AGENCY_TOKEN
+  company_id: demo_company
+  ignore_locations: [loc_internal]
+clients:
+  - name: Example Clinic North
+    ghl: {location_id: loc_demo_sync, token_env: GHL_TOKEN_NORTH}
+    meta: {ad_account_id: act_111}
+    sites: ["https://offer.example-clinic.com/"]
+  - name: Example Clinic South
+    ghl: {location_id: loc_demo_ok, token_env: GHL_TOKEN_SOUTH}
+    meta: {ad_account_id: act_222}
+    sites: ["https://book.example-clinic.com/"]
+  - name: Example Clinic East
+    ghl: {location_id: loc_demo_revoked, token_env: GHL_TOKEN_EAST}
+  - name: Example Clinic West (just signed)
+    ghl: {location_id: "", token_env: GHL_TOKEN_WEST}
